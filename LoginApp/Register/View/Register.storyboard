@@ -15,37 +15,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yk7-h9-b3w">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk7-h9-b3w">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhy-SE-oWi">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JR1-LF-WX8">
-                                                <rect key="frame" x="40" y="349" width="334" height="34"/>
+                                                <rect key="frame" x="40" y="595" width="334" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="334" id="39B-OE-946"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="6Ry-r7-USV"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="AlZ-kS-sbf"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="334" id="QL7-Of-RP5"/>
                                                     <constraint firstAttribute="height" constant="34" id="d9k-Gu-8zg"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-sz-1UJ">
-                                                <rect key="frame" x="40" y="197" width="334" height="34"/>
+                                                <rect key="frame" x="40" y="356" width="334" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="U22-xQ-MCk"/>
-                                                    <constraint firstAttribute="height" constant="34" id="qMz-D9-Vp2"/>
-                                                    <constraint firstAttribute="width" constant="334" id="quY-XX-nJD"/>
+                                                    <constraint firstAttribute="height" constant="34" id="0hi-4o-Ts6"/>
+                                                    <constraint firstAttribute="width" constant="334" id="eth-n7-aZu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHV-UV-A9A">
-                                                <rect key="frame" x="141" y="498" width="132" height="30"/>
+                                                <rect key="frame" x="141" y="683" width="132" height="30"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="CiR-q7-Bjr"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Opz-Tf-mWL"/>
                                                     <constraint firstAttribute="width" constant="132" id="PGo-9V-02d"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="132" id="Rb8-rN-4MN"/>
                                                     <constraint firstAttribute="height" constant="30" id="Saw-Ag-VXR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -57,12 +60,12 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="oHV-UV-A9A" firstAttribute="centerX" secondItem="Fhy-SE-oWi" secondAttribute="centerX" id="3Cf-Zn-VAt"/>
-                                            <constraint firstItem="oHV-UV-A9A" firstAttribute="top" secondItem="JR1-LF-WX8" secondAttribute="bottom" constant="115" id="5Ha-2w-Iae"/>
-                                            <constraint firstItem="Kns-sz-1UJ" firstAttribute="centerX" secondItem="Fhy-SE-oWi" secondAttribute="centerX" id="6hD-m1-DvM"/>
-                                            <constraint firstItem="JR1-LF-WX8" firstAttribute="top" secondItem="Kns-sz-1UJ" secondAttribute="bottom" constant="118" id="9GG-Z5-6n9"/>
-                                            <constraint firstItem="Kns-sz-1UJ" firstAttribute="top" secondItem="Fhy-SE-oWi" secondAttribute="top" constant="197" id="k6k-zg-k0D"/>
-                                            <constraint firstItem="JR1-LF-WX8" firstAttribute="centerX" secondItem="Fhy-SE-oWi" secondAttribute="centerX" id="q3O-Gb-X82"/>
+                                            <constraint firstAttribute="bottom" secondItem="Kns-sz-1UJ" secondAttribute="bottom" constant="418" id="LIG-v6-bmt"/>
+                                            <constraint firstItem="JR1-LF-WX8" firstAttribute="top" secondItem="Kns-sz-1UJ" secondAttribute="bottom" constant="205" id="USM-CD-XKC"/>
+                                            <constraint firstItem="JR1-LF-WX8" firstAttribute="centerX" secondItem="Fhy-SE-oWi" secondAttribute="centerX" id="Xjd-co-1Fq"/>
+                                            <constraint firstItem="oHV-UV-A9A" firstAttribute="centerX" secondItem="Fhy-SE-oWi" secondAttribute="centerX" id="YM8-6g-1sR"/>
+                                            <constraint firstItem="oHV-UV-A9A" firstAttribute="top" secondItem="JR1-LF-WX8" secondAttribute="bottom" constant="54" id="nQo-x8-gRI"/>
+                                            <constraint firstItem="Kns-sz-1UJ" firstAttribute="centerX" secondItem="Fhy-SE-oWi" secondAttribute="centerX" id="yxg-PJ-0iM"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -90,6 +93,7 @@
                         <outlet property="contentView" destination="Fhy-SE-oWi" id="dXr-CN-Hj9"/>
                         <outlet property="nameTextField" destination="Kns-sz-1UJ" id="D9x-Kr-er5"/>
                         <outlet property="pwdTextField" destination="JR1-LF-WX8" id="0Aa-4u-sox"/>
+                        <outlet property="registerButton" destination="oHV-UV-A9A" id="7q4-zV-oKG"/>
                         <outlet property="scrollView" destination="yk7-h9-b3w" id="uCE-Wp-hnY"/>
                     </connections>
                 </viewController>
