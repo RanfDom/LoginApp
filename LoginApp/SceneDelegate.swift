@@ -20,19 +20,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         
         
-        guard let wScene = scene as? UIWindowScene else  { return }
-        
-        //self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = UIWindow(windowScene: wScene)
-        
-        if let user = UserDefaults.standard.string(forKey: "name") {
-            // Usuario Registrado
-            self.window?.rootViewController = LoginWireFrame.buildLoginModule() as? UIViewController
-        } else {
-            self.window?.rootViewController = RegisterWireFrame.buildRegisterModule() as? UIViewController
-        }
-        
-        self.window?.makeKeyAndVisible()
+//        guard let wScene = scene as? UIWindowScene else  { return }
+//
+//        //self.window = UIWindow(frame: UIScreen.main.bounds)
+//        self.window = UIWindow(windowScene: wScene)
+//
+//        if let user = UserDefaults.standard.string(forKey: "name") {
+//            // Usuario Registrado
+//            self.window?.rootViewController = LoginWireFrame.buildLoginModule() as? UIViewController
+//        } else {
+//            self.window?.rootViewController = RegisterWireFrame.buildRegisterModule() as? UIViewController
+//        }
+//
+//        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
