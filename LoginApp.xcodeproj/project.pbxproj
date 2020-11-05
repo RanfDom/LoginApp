@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07D585728252AB1A11369D11 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */; };
+		2932D1AF255246B800005015 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932D1AE255246B800005015 /* Weather.swift */; };
 		2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C0254A55C70018CAB3 /* AppDelegate.swift */; };
 		2976E2C3254A55C70018CAB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C2254A55C70018CAB3 /* SceneDelegate.swift */; };
 		2976E2C5254A55C70018CAB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C4254A55C70018CAB3 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2932D1AE255246B800005015 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2976E2BD254A55C70018CAB3 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2976E2C0254A55C70018CAB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2976E2C2254A55C70018CAB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2932D1AD2552469700005015 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2932D1AE255246B800005015 /* Weather.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		2976E2B4254A55C60018CAB3 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 		2976E2BF254A55C70018CAB3 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				2932D1AD2552469700005015 /* Entities */,
 				2976E2E5254A67F40018CAB3 /* Register */,
 				2976E2D5254A55E50018CAB3 /* Login */,
 				2976E2C0254A55C70018CAB3 /* AppDelegate.swift */,
@@ -190,7 +201,6 @@
 				D872FFBB37942B78D68517F0 /* Pods-LoginApp.debug.xcconfig */,
 				C795C6741BFD36ECA8177D6B /* Pods-LoginApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -323,6 +333,7 @@
 				2976E2F1254A69600018CAB3 /* RegisterWireFrame.swift in Sources */,
 				2976E2F3254A69E90018CAB3 /* RegisterController.swift in Sources */,
 				2976E2E0254A594A0018CAB3 /* LoginController.swift in Sources */,
+				2932D1AF255246B800005015 /* Weather.swift in Sources */,
 				2976E2DD254A56FE0018CAB3 /* LoginProtocols.swift in Sources */,
 				2976E2EF254A69100018CAB3 /* RegisterProtocols.swift in Sources */,
 				2976E2EB254A683B0018CAB3 /* RegisterViewController.swift in Sources */,

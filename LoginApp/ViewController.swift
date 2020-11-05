@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import Alamofire
+import ObjectMapper
 
 class ViewController: UIViewController {
 
@@ -27,18 +28,35 @@ class ViewController: UIViewController {
         
         let params = [
             "lat" : "19.3934164",
-            "lon" : "-99.1616135"
+            "lon" : "-99.1616135",
+            "lang" : "es"
         ]
         
         getWeatherAlamofireWith(url, headers: headers, params: params)
+        //getWeatherURLSessionWith(url, headers: headers, params: params)
     }
     
     private func getWeatherAlamofireWith(_ url: URL, headers: [String:String], params: [String:String]) {
         AF.request(url,
                    parameters: params,
-                   headers: HTTPHeaders(headers)).responseJSON { (response) in
-            print(response)
+                   headers: HTTPHeaders(headers)).responseJSON { response in
+                    switch response.result {
+                    case .success(_):
+                        guard let weatherData: WeatherData = Mapper<WeatherData>().map(JSONString: String(data: response.data!,encoding: .utf8)!) else { return }
+                        
+                        DispatchQueue.main.async { [weak self] in
+                            guard let weather: ZoneWeather = weatherData.data?.first else { return }
+                            self?.presentWeatherWith(weather)
+                        }
+                    case .failure(let error):
+                        print("Something whent wrong: \(error)")
+                    }
         }
+    }
+    
+    private func presentWeatherWith(_ zoneWeather: ZoneWeather ) {
+        // present Alert
+        print(zoneWeather)
     }
     
     private func getWeatherURLSessionWith(_ url: URL, headers: [String: String], params: [String:String]) {
