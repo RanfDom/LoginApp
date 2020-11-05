@@ -10,9 +10,14 @@ import UIKit
 import Foundation
 import Alamofire
 import ObjectMapper
+import MapKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var map: MKMapView!
+    var locationManager: CLLocationManager!
+    var currentLocationStr: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,9 +37,44 @@ class ViewController: UIViewController {
             "lang" : "es"
         ]
         
-        getWeatherAlamofireWith(url, headers: headers, params: params)
+        //getWeatherAlamofireWith(url, headers: headers, params: params)
         //getWeatherURLSessionWith(url, headers: headers, params: params)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        determineCurrentLocation()
+    }
+    
+    private func determineCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            case .restricted, .denied:
+                // No access
+                requestUpdateSetting()
+            case .authorizedWhenInUse, .authorizedAlways:
+                locationManager.startUpdatingLocation()
+            }
+        } else {
+            print("Location services not enabled")
+        }
+    }
+    
+    private func requestUpdateSetting() {
+        let alert: UIAlertController = UIAlertController(title: "Permisos de ubicación", message: "Para continuar acepta los permisos de ubicación desde la configuración de tu aplicativo", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Ir a configuraciones", style: .default, handler: { (_) in
+            UIApplication.shared.open(URL.init(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     private func getWeatherAlamofireWith(_ url: URL, headers: [String:String], params: [String:String]) {
         AF.request(url,
@@ -52,6 +92,19 @@ class ViewController: UIViewController {
                         print("Something whent wrong: \(error)")
                     }
         }
+    }
+    
+    private func getLocationTitle(lattitude: CLLocationDegrees, longitude: CLLocationDegrees) -> String {
+        let geoCoder = CLGeocoder()
+        let location = CLLocation(latitude: lattitude, longitude: longitude)
+        
+        geoCoder.reverseGeocodeLocation(location) { (place, error) in
+            guard let place = place else { return }
+            guard let city = place.first?.subAdministrativeArea else { return }
+            self.currentLocationStr = city
+        }
+        
+        return currentLocationStr
     }
     
     private func presentWeatherWith(_ zoneWeather: ZoneWeather ) {
@@ -88,5 +141,26 @@ class ViewController: UIViewController {
         print("URL invalida")
     }
 
+    
 }
 
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let userLocation: CLLocation = locations.first else { return }
+        let center: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        let region: MKCoordinateRegion = MKCoordinateRegion(center: center, latitudinalMeters: 0.01, longitudinalMeters: 0.01)
+        
+        map.setRegion(region, animated: true)
+        
+        let mapAnnotation: MKPointAnnotation = MKPointAnnotation()
+        mapAnnotation.coordinate = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        mapAnnotation.title = getLocationTitle(lattitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        
+        map.addAnnotation(mapAnnotation)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error: \(error.localizedDescription)")
+    }
+}
