@@ -37,8 +37,9 @@ class ViewController: UIViewController {
             "lang" : "es"
         ]
         
-        //getWeatherAlamofireWith(url, headers: headers, params: params)
+        getWeatherAlamofireWith(url, headers: headers, params: params)
         //getWeatherURLSessionWith(url, headers: headers, params: params)
+        map.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
                 // No access
                 requestUpdateSetting()
             case .authorizedWhenInUse, .authorizedAlways:
+                //map.showsUserLocation = true
                 locationManager.startUpdatingLocation()
             }
         } else {
@@ -74,7 +76,6 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
     
     private func getWeatherAlamofireWith(_ url: URL, headers: [String:String], params: [String:String]) {
         AF.request(url,
@@ -162,5 +163,11 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: \(error.localizedDescription)")
+    }
+}
+
+extension ViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print(view)
     }
 }
