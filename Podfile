@@ -8,5 +8,6 @@ target 'LoginApp' do
   # Pods for LoginApp
   pod 'Alamofire', '~> 5.2'
   pod 'ObjectMapper', '~> 3.5'
+  pod 'NVActivityIndicatorView'
 
 end

@@ -11,6 +11,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 import MapKit
+import NVActivityIndicatorView
 
 class ViewController: UIViewController {
 
@@ -18,9 +19,19 @@ class ViewController: UIViewController {
     var locationManager: CLLocationManager!
     var currentLocationStr: String = ""
     
+    var activityIndicator: NVActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        map.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        activityIndicator = NVActivityIndicatorView(frame: map.frame, type: .ballDoubleBounce, color: .blue, padding: 0.5)
+        determineCurrentLocation()
+        
         guard let url: URL = URL(string: "https://rapidapi.p.rapidapi.com/current") else {
             errorAppeared()
             return
@@ -39,12 +50,6 @@ class ViewController: UIViewController {
         
         getWeatherAlamofireWith(url, headers: headers, params: params)
         //getWeatherURLSessionWith(url, headers: headers, params: params)
-        map.delegate = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        determineCurrentLocation()
     }
     
     private func determineCurrentLocation() {
@@ -62,6 +67,7 @@ class ViewController: UIViewController {
             case .authorizedWhenInUse, .authorizedAlways:
                 //map.showsUserLocation = true
                 locationManager.startUpdatingLocation()
+                map.showsUserLocation = true
             }
         } else {
             print("Location services not enabled")
@@ -84,6 +90,7 @@ class ViewController: UIViewController {
                     switch response.result {
                     case .success(_):
                         guard let weatherData: WeatherData = Mapper<WeatherData>().map(JSONString: String(data: response.data!,encoding: .utf8)!) else { return }
+                        debugPrint(response)
                         
                         DispatchQueue.main.async { [weak self] in
                             guard let weather: ZoneWeather = weatherData.data?.first else { return }
@@ -142,23 +149,51 @@ class ViewController: UIViewController {
         print("URL invalida")
     }
 
+    private func createRequest(from origin: MKPlacemark, to destination: MKPlacemark) -> MKDirections.Request? {
+        let request: MKDirections.Request = MKDirections.Request()
+        request.source = MKMapItem(placemark: origin)
+        request.destination = MKMapItem(placemark: destination)
+        request.transportType = .walking
+        
+        return request
+    }
     
+    private func drawRoute(from origin: MKPlacemark, to destination: MKPlacemark) {
+        guard let request = createRequest(from: origin, to: destination) else { return }
+        let directions = MKDirections(request: request)
+        
+        directions.calculate { (response, error) in
+            guard let response = response else { return }
+            let routes = response.routes
+            
+            for route in routes {
+                self.map.addOverlay(route.polyline)
+                self.map.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+        }
+    }
 }
 
 extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let userLocation: CLLocation = locations.first else { return }
+        
         let center: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
-        let region: MKCoordinateRegion = MKCoordinateRegion(center: center, latitudinalMeters: 0.01, longitudinalMeters: 0.01)
+        let region: MKCoordinateRegion = MKCoordinateRegion(center: center, latitudinalMeters: 4000, longitudinalMeters: 4000)
         
         map.setRegion(region, animated: true)
         
+        //Parque delta 19.3980268,-99.1573184
         let mapAnnotation: MKPointAnnotation = MKPointAnnotation()
-        mapAnnotation.coordinate = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
+        mapAnnotation.coordinate = CLLocationCoordinate2D(latitude: 19.3980268, longitude: -99.1573184)
         mapAnnotation.title = getLocationTitle(lattitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
         
         map.addAnnotation(mapAnnotation)
+        
+        let origin = MKPlacemark(coordinate: center)
+        let destination = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 19.3980268, longitude: -99.1573184))
+        drawRoute(from: origin, to: destination)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -169,5 +204,12 @@ extension ViewController: CLLocationManagerDelegate {
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print(view)
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        render.strokeColor = .red
+        render.lineWidth = 5
+        return render
     }
 }
