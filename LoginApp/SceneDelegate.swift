@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,21 +19,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         //guard let _ = (scene as? UIWindowScene) else { return }
         
-        
-        
-//        guard let wScene = scene as? UIWindowScene else  { return }
-//
-//        //self.window = UIWindow(frame: UIScreen.main.bounds)
-//        self.window = UIWindow(windowScene: wScene)
-//
-//        if let user = UserDefaults.standard.string(forKey: "name") {
-//            // Usuario Registrado
-//            self.window?.rootViewController = LoginWireFrame.buildLoginModule() as? UIViewController
-//        } else {
-//            self.window?.rootViewController = RegisterWireFrame.buildRegisterModule() as? UIViewController
-//        }
-//
-//        self.window?.makeKeyAndVisible()
+        guard let wScene = scene as? UIWindowScene else  { return }
+
+        //self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = UIWindow(windowScene: wScene)
+
+        if let user = UserDefaults.standard.string(forKey: "name") {
+            // Usuario Registrado
+            self.window?.rootViewController = LoginWireFrame.buildLoginModule() as? UIViewController
+        } else {
+            self.window?.rootViewController = RegisterWireFrame.buildRegisterModule() as? UIViewController
+        }
+
+        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -63,6 +62,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else { return }
+        ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
+    }
 
 }
 

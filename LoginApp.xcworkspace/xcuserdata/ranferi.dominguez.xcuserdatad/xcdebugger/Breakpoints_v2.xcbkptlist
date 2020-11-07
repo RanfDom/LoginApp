@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C9E1A301-43D1-43E2-A354-D5F3559D45AF"
+            uuid = "A74329CA-0B1F-4BDB-9C9A-357377899F2C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LoginApp/ViewController.swift"
+            filePath = "LoginApp/View/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "presentWeatherWith(_:)"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "loginButton(_:didCompleteWith:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B26B87DB-F499-4A66-8BFF-206CC737E866"
+            uuid = "9901775B-A369-4C72-B90B-949B6D85D280"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LoginApp/ViewController.swift"
+            filePath = "LoginApp/View/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "getWeatherAlamofireWith(_:headers:params:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "greetUser()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

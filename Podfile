@@ -9,5 +9,7 @@ target 'LoginApp' do
   pod 'Alamofire', '~> 5.2'
   pod 'ObjectMapper', '~> 3.5'
   pod 'NVActivityIndicatorView'
+  pod 'FBSDKLoginKit'
+  pod 'SDWebImage', '~> 5.0'
 
 end
