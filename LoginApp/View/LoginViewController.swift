@@ -22,30 +22,28 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    @IBAction func loginButtonAction(_ sender: Any) {
+        controller?.validateUserWith(pwdInputText.text ?? "")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        pwdInputText.isSecureTextEntry = true
+        pwdInputText.delegate = self
+        loginButton.setTitle("Login", for: .normal)
         
         if !isFBValidToken() {
             addFBLoginButton()
         } else {
             greetUser()
         }
+        
+        controller?.getUserInfo()
     }
     
     func present(alert: UIAlertController) {
         present(alert, animated: true, completion: nil)
-    }
-    
-    @objc func keyboardWillHide(notification: Notification) {
-        
-        
-    }
-    
-    @objc func keyboardWillShow(notification: Notification) {
-        
     }
     
     private func isFBValidToken() -> Bool {
@@ -77,6 +75,10 @@ class LoginViewController: UIViewController, LoginViewProtocol {
             }
         }
     }
+    
+    func updateView(with model: LoginEntityView) {
+        labelHello.text = model.name
+    }
 }
 
 extension LoginViewController: LoginButtonDelegate {
@@ -97,4 +99,11 @@ extension LoginViewController: LoginButtonDelegate {
     }
     
     
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
 }

@@ -15,12 +15,14 @@ protocol LoginControllerProtocol {
     var view: LoginViewProtocol? { get set }
 
     func validateUserWith(_ pwd: String)
+    func getUserInfo()
 }
 
 // MARK: Controller to View
 protocol LoginViewProtocol {
     var controller: LoginControllerProtocol? { get set }
     
+    func updateView(with model: LoginEntityView)
     func present(alert: UIAlertController)
 }
 
