@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -23,8 +24,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         //self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window = UIWindow(windowScene: wScene)
+        
+        var usrData: [NSManagedObject] = []
+        
+        // 1
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let request: NSFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
+        
+        // 3
+        do {
+            let result = try context.fetch(request)
+            usrData = result as [NSManagedObject]
+        } catch let error as NSError {
+            print("Error, no ha sido posible cargar user")
+        }
+        
+        // 5 hacer uso del response.
 
-        if let user = UserDefaults.standard.string(forKey: "name") {
+        if !usrData.isEmpty {
             // Usuario Registrado
             self.window?.rootViewController = LoginWireFrame.buildLoginModule() as? UIViewController
         } else {

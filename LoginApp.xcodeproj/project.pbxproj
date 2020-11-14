@@ -25,6 +25,7 @@
 		2976E2EF254A69100018CAB3 /* RegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2EE254A69100018CAB3 /* RegisterProtocols.swift */; };
 		2976E2F1254A69600018CAB3 /* RegisterWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2F0254A69600018CAB3 /* RegisterWireFrame.swift */; };
 		2976E2F3254A69E90018CAB3 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2F2254A69E90018CAB3 /* RegisterController.swift */; };
+		29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29CD0155255F70A9002B5B4E /* LoginDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		2976E2EE254A69100018CAB3 /* RegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocols.swift; sourceTree = "<group>"; };
 		2976E2F0254A69600018CAB3 /* RegisterWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWireFrame.swift; sourceTree = "<group>"; };
 		2976E2F2254A69E90018CAB3 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		29CD0156255F70A9002B5B4E /* LoginDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C795C6741BFD36ECA8177D6B /* Pods-LoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.release.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.release.xcconfig"; sourceTree = "<group>"; };
 		D872FFBB37942B78D68517F0 /* Pods-LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 		2976E2BF254A55C70018CAB3 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				29CD0154255F7083002B5B4E /* Data */,
 				2932D1AD2552469700005015 /* Entities */,
 				2976E2E5254A67F40018CAB3 /* Register */,
 				2976E2D5254A55E50018CAB3 /* Login */,
@@ -193,6 +196,14 @@
 				2976E2EE254A69100018CAB3 /* RegisterProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		29CD0154255F7083002B5B4E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				29CD0155255F70A9002B5B4E /* LoginDataModel.xcdatamodeld */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		61C43299109F580154934C39 /* Pods */ = {
@@ -341,6 +352,7 @@
 				2976E2E4254A656D0018CAB3 /* LoginWireframe.swift in Sources */,
 				2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */,
 				2976E2C3254A55C70018CAB3 /* SceneDelegate.swift in Sources */,
+				29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +552,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		29CD0155255F70A9002B5B4E /* LoginDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				29CD0156255F70A9002B5B4E /* LoginDataModel.xcdatamodel */,
+			);
+			currentVersion = 29CD0156255F70A9002B5B4E /* LoginDataModel.xcdatamodel */;
+			path = LoginDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2976E2B5254A55C60018CAB3 /* Project object */;
 }

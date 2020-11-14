@@ -13,11 +13,19 @@ import ObjectMapper
 import MapKit
 import NVActivityIndicatorView
 
+//import CoreData
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
     var currentLocationStr: String = ""
+    
+//    let objectModel: NSManagedObjectModel
+//    let managedObject: NSManagedObject
+//    let context: NSManagedObjectContext
+//    let description: NSEntityDescription
+//    let request: NSFetchRequest
     
     var activityIndicator: NVActivityIndicatorView?
     
