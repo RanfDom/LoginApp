@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		07D585728252AB1A11369D11 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */; };
 		2932D1AF255246B800005015 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932D1AE255246B800005015 /* Weather.swift */; };
+		2935ACBA2564C2EE0037DE23 /* AgendaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */; };
+		2935ACBE2564C4B20037DE23 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */; };
+		2935ACC12564C5CA0037DE23 /* AgendaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC02564C5CA0037DE23 /* AgendaModel.swift */; };
+		2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC22564C82A0037DE23 /* AgendaController.swift */; };
+		2935ACC52564C83A0037DE23 /* AgendaProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */; };
 		2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C0254A55C70018CAB3 /* AppDelegate.swift */; };
 		2976E2C3254A55C70018CAB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C2254A55C70018CAB3 /* SceneDelegate.swift */; };
 		2976E2C5254A55C70018CAB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C4254A55C70018CAB3 /* ViewController.swift */; };
@@ -32,6 +37,11 @@
 /* Begin PBXFileReference section */
 		1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2932D1AE255246B800005015 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaView.storyboard; sourceTree = "<group>"; };
+		2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		2935ACC02564C5CA0037DE23 /* AgendaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaModel.swift; sourceTree = "<group>"; };
+		2935ACC22564C82A0037DE23 /* AgendaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaController.swift; sourceTree = "<group>"; };
+		2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaProtocols.swift; sourceTree = "<group>"; };
 		2976E2BD254A55C70018CAB3 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2976E2C0254A55C70018CAB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2976E2C2254A55C70018CAB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +87,50 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		2935ACB72564C2C00037DE23 /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				2935ACBF2564C5A80037DE23 /* Model */,
+				2935ACBC2564C49D0037DE23 /* Protocols */,
+				2935ACBB2564C4910037DE23 /* Controller */,
+				2935ACB82564C2D30037DE23 /* View */,
+			);
+			path = Agenda;
+			sourceTree = "<group>";
+		};
+		2935ACB82564C2D30037DE23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */,
+				2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2935ACBB2564C4910037DE23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2935ACC22564C82A0037DE23 /* AgendaController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2935ACBC2564C49D0037DE23 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		2935ACBF2564C5A80037DE23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2935ACC02564C5CA0037DE23 /* AgendaModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2976E2B4254A55C60018CAB3 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +152,7 @@
 		2976E2BF254A55C70018CAB3 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				2935ACB72564C2C00037DE23 /* Agenda */,
 				29CD0154255F7083002B5B4E /* Data */,
 				2932D1AD2552469700005015 /* Entities */,
 				2976E2E5254A67F40018CAB3 /* Register */,
@@ -289,6 +344,7 @@
 				2976E2D8254A56270018CAB3 /* Login.storyboard in Resources */,
 				2976E2CD254A55CE0018CAB3 /* LaunchScreen.storyboard in Resources */,
 				2976E2CA254A55CE0018CAB3 /* Assets.xcassets in Resources */,
+				2935ACBA2564C2EE0037DE23 /* AgendaView.storyboard in Resources */,
 				2976E2C8254A55C70018CAB3 /* Main.storyboard in Resources */,
 				2976E2E9254A681C0018CAB3 /* Register.storyboard in Resources */,
 			);
@@ -343,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */,
 				2976E2DA254A568F0018CAB3 /* LoginViewController.swift in Sources */,
 				2976E2F1254A69600018CAB3 /* RegisterWireFrame.swift in Sources */,
 				2976E2F3254A69E90018CAB3 /* RegisterController.swift in Sources */,
@@ -354,9 +411,12 @@
 				2976E2C5254A55C70018CAB3 /* ViewController.swift in Sources */,
 				2976E2E4254A656D0018CAB3 /* LoginWireframe.swift in Sources */,
 				2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */,
+				2935ACBE2564C4B20037DE23 /* AgendaViewController.swift in Sources */,
 				2976E2C3254A55C70018CAB3 /* SceneDelegate.swift in Sources */,
+				2935ACC12564C5CA0037DE23 /* AgendaModel.swift in Sources */,
 				29CD017C255F8209002B5B4E /* LoginEntity.swift in Sources */,
 				29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */,
+				2935ACC52564C83A0037DE23 /* AgendaProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

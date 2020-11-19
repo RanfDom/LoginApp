@@ -42,8 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print("Error, no ha sido posible cargar user")
         }
         
-        // 5 hacer uso del response.
-
+        // 4 hacer uso del response.
         if !usrData.isEmpty {
             // Usuario Registrado
             self.window?.rootViewController = LoginWireFrame.buildLoginModule() as? UIViewController

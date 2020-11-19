@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Agenda View Controller-->
+        <scene sceneID="7L7-hD-ioz">
+            <objects>
+                <viewController storyboardIdentifier="AgendaView" id="Lml-Jl-61O" customClass="AgendaViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qVS-5B-gd3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wHj-Kp-7ge">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="112" id="mYe-P1-aIh">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="112"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mYe-P1-aIh" id="LPe-Mp-5Hb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mt-Fe-Ba3">
+                                                    <rect key="frame" x="20" y="11" width="374" height="90"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pig-Yh-bin">
+                                <rect key="frame" x="55" y="347.5" width="304" height="201"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zg-Mp-6Iv">
+                                        <rect key="frame" x="20" y="58" width="264" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="XuA-Pb-NyR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcx-OM-gR7">
+                                        <rect key="frame" x="92.5" y="129" width="119" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="119" id="hph-So-rlt"/>
+                                            <constraint firstAttribute="height" constant="30" id="x9s-LQ-wqy"/>
+                                        </constraints>
+                                        <state key="normal" title="Registro"/>
+                                        <connections>
+                                            <action selector="registerButtonAction:" destination="Lml-Jl-61O" eventType="touchUpInside" id="irI-MQ-sqb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="2Zg-Mp-6Iv" firstAttribute="top" secondItem="pig-Yh-bin" secondAttribute="top" constant="58" id="0UI-Qt-ovn"/>
+                                    <constraint firstItem="Mcx-OM-gR7" firstAttribute="centerX" secondItem="pig-Yh-bin" secondAttribute="centerX" id="1s3-hd-4pl"/>
+                                    <constraint firstItem="2Zg-Mp-6Iv" firstAttribute="leading" secondItem="pig-Yh-bin" secondAttribute="leading" constant="20" id="Ec5-5w-Gsh"/>
+                                    <constraint firstAttribute="width" constant="304" id="PdZ-cX-ifs"/>
+                                    <constraint firstAttribute="height" constant="201" id="Vu0-As-069"/>
+                                    <constraint firstItem="Mcx-OM-gR7" firstAttribute="top" secondItem="2Zg-Mp-6Iv" secondAttribute="bottom" constant="26" id="a8D-Qa-qxP"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Zg-Mp-6Iv" secondAttribute="trailing" constant="20" id="gck-38-vyQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wHj-Kp-7ge" firstAttribute="leading" secondItem="4b8-nr-lh7" secondAttribute="leading" id="8La-fa-ToM"/>
+                            <constraint firstItem="4b8-nr-lh7" firstAttribute="trailing" secondItem="wHj-Kp-7ge" secondAttribute="trailing" id="kYE-sj-eMD"/>
+                            <constraint firstItem="pig-Yh-bin" firstAttribute="centerY" secondItem="qVS-5B-gd3" secondAttribute="centerY" id="n3n-aN-3SZ"/>
+                            <constraint firstItem="pig-Yh-bin" firstAttribute="centerX" secondItem="qVS-5B-gd3" secondAttribute="centerX" id="pkm-op-BOl"/>
+                            <constraint firstItem="wHj-Kp-7ge" firstAttribute="top" secondItem="4b8-nr-lh7" secondAttribute="top" id="rsR-VT-fjs"/>
+                            <constraint firstItem="4b8-nr-lh7" firstAttribute="bottom" secondItem="wHj-Kp-7ge" secondAttribute="bottom" id="zOC-2q-ygj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4b8-nr-lh7"/>
+                    </view>
+                    <connections>
+                        <outlet property="contactsTableView" destination="wHj-Kp-7ge" id="BtX-zI-c59"/>
+                        <outlet property="newContactTxtField" destination="2Zg-Mp-6Iv" id="Lng-93-Ujj"/>
+                        <outlet property="registerView" destination="pig-Yh-bin" id="Tg9-wx-e1O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cr2-MH-tAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="155.35714285714286"/>
+        </scene>
+    </scenes>
+</document>
