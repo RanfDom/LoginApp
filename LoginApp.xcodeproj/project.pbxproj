@@ -32,6 +32,7 @@
 		2976E2F3254A69E90018CAB3 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2F2254A69E90018CAB3 /* RegisterController.swift */; };
 		29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29CD0155255F70A9002B5B4E /* LoginDataModel.xcdatamodeld */; };
 		29CD017C255F8209002B5B4E /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD017B255F8209002B5B4E /* LoginEntity.swift */; };
+		29DF41BA25660C4500C4D038 /* AgendaWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		2976E2F2254A69E90018CAB3 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		29CD0156255F70A9002B5B4E /* LoginDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginDataModel.xcdatamodel; sourceTree = "<group>"; };
 		29CD017B255F8209002B5B4E /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaWireFrame.swift; sourceTree = "<group>"; };
 		C795C6741BFD36ECA8177D6B /* Pods-LoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.release.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.release.xcconfig"; sourceTree = "<group>"; };
 		D872FFBB37942B78D68517F0 /* Pods-LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		2935ACB72564C2C00037DE23 /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				29DF41B825660C2500C4D038 /* Wireframe */,
 				2935ACBF2564C5A80037DE23 /* Model */,
 				2935ACBC2564C49D0037DE23 /* Protocols */,
 				2935ACBB2564C4910037DE23 /* Controller */,
@@ -264,6 +267,14 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		29DF41B825660C2500C4D038 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */,
+			);
+			name = Wireframe;
+			sourceTree = "<group>";
+		};
 		61C43299109F580154934C39 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29DF41BA25660C4500C4D038 /* AgendaWireFrame.swift in Sources */,
 				2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */,
 				2976E2DA254A568F0018CAB3 /* LoginViewController.swift in Sources */,
 				2976E2F1254A69600018CAB3 /* RegisterWireFrame.swift in Sources */,

@@ -12,6 +12,7 @@ protocol AgendaControllable {
     var view: AgendaViewable? { get set }
     
     func registerContact(with data: NewContactItem)
+    func validateContacts()
 }
 
 protocol AgendaViewable {
@@ -19,4 +20,8 @@ protocol AgendaViewable {
     
     func showRegisterView(_ isHidden: Bool)
     func updateTableView(with contacts: [ContactItem])
+}
+
+protocol AgendaWireframe: class {
+    static func buildRegisterModule() -> Any
 }

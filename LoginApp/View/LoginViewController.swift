@@ -12,6 +12,7 @@ import FBSDKLoginKit
 import SDWebImage
 
 class LoginViewController: UIViewController, LoginViewProtocol {
+    
     var controller: LoginControllerProtocol?
     
     @IBOutlet weak var labelHello: UILabel!
@@ -42,8 +43,17 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         controller?.getUserInfo()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        pwdInputText.text = nil
+    }
+    
     func present(alert: UIAlertController) {
         present(alert, animated: true, completion: nil)
+    }
+    
+    func pushNewController(_ controller: UIViewController) {
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     private func isFBValidToken() -> Bool {

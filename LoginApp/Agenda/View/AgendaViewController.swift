@@ -28,6 +28,7 @@ class AgendaViewController: UIViewController {
         super.viewDidLoad()
         self.contactsTableView.delegate = self
         self.contactsTableView.dataSource = self
+        controller?.validateContacts()
     }
 }
 

@@ -13,13 +13,49 @@ import UIKit
 class AgendaController {
     var view: AgendaViewable?
     
+    var userContacts: [ContactData] = []
+    
     // Obtener los contactos de la base de datos y peridr actualizar la vista
-    private func getContacts() {
+    private func getContacts() -> [ContactData] {
+        var contacts: [ContactData] = []
         
+        // 1
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let request: NSFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+               
+        // 3
+        do {
+            let result = try context.fetch(request)
+            let managedResult = result as [NSManagedObject]
+            
+            if managedResult.isEmpty { return contacts }
+            
+            for resultItem in managedResult {
+                let name: String = resultItem.value(forKey: "name") as? String ?? ""
+                contacts.append(ContactData(name))
+            }
+            
+        } catch let error as NSError {
+            print("Error, no ha sido posible cargar user: \(error.userInfo)")
+        }
+
+        return contacts
     }
 }
 
 extension AgendaController: AgendaControllable {
+    
+    func validateContacts() {
+        userContacts = getContacts()
+        if userContacts.isEmpty {
+            view?.showRegisterView(false)
+        } else {
+            view?.updateTableView(with: userContacts)
+        }
+    }
     
     func registerContact(with data: NewContactItem) {
         
@@ -32,13 +68,12 @@ extension AgendaController: AgendaControllable {
         let usr = NSManagedObject(entity: entity, insertInto: context)
         
         // 3
-        usr.setValue(data.name, forKey: "name")
-        
+        usr.setValue(data.name, forKey: "name") // KVC -> Key Value Coding
         // 4
         do {
             try context.save()
-            view?.showRegisterView(true)
-            getContacts()
+            userContacts.append(ContactData(data.name))
+            view?.updateTableView(with: userContacts)
         } catch let error as NSError {
             print("No se puede guardar el usuario. Eror:\(error.userInfo)")
         }

@@ -15,3 +15,18 @@ protocol ContactItem {
 struct NewContactItem {
     let name: String
 }
+
+struct ContactData: ContactItem {
+    var name: String
+    
+    let phoneNumber: String?
+    let eMail: String?
+}
+
+extension ContactData {
+    init(_ name: String) {
+        self.name = name
+        self.phoneNumber = nil
+        self.eMail = nil
+    }
+}

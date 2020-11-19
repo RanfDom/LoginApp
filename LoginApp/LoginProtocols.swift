@@ -24,6 +24,7 @@ protocol LoginViewProtocol {
     
     func updateView(with model: LoginEntityView)
     func present(alert: UIAlertController)
+    func pushNewController(_ controller: UIViewController)
 }
 
 // MARK: Wireframe

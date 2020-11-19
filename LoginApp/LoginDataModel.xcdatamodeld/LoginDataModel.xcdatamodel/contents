@@ -8,7 +8,7 @@
         <attribute name="pwd" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="User" positionX="-54" positionY="-9" width="128" height="73"/>
         <element name="Contact" positionX="-45" positionY="18" width="128" height="58"/>
+        <element name="User" positionX="-54" positionY="-9" width="128" height="73"/>
     </elements>
 </model>

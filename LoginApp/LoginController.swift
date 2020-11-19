@@ -45,7 +45,8 @@ class LoginController: LoginControllerProtocol {
     func validateUserWith(_ pwd: String) {
         guard let userPwd = userData?.pwd else { return }
         if pwd == userPwd {
-            print("Continue Login")
+            let controller: UIViewController = AgendaWireFrame.buildRegisterModule() as! UIViewController
+            view?.pushNewController(controller)
         } else {
             print("Pawwsord Incorrect")
         }
