@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07D585728252AB1A11369D11 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */; };
+		2927A50525675AAA00F4A6E1 /* AgendaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */; };
 		2932D1AF255246B800005015 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932D1AE255246B800005015 /* Weather.swift */; };
 		2935ACBA2564C2EE0037DE23 /* AgendaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */; };
 		2935ACBE2564C4B20037DE23 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTableViewCell.swift; sourceTree = "<group>"; };
 		2932D1AE255246B800005015 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaView.storyboard; sourceTree = "<group>"; };
 		2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */,
 				2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */,
+				2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				29CD017C255F8209002B5B4E /* LoginEntity.swift in Sources */,
 				29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */,
 				2935ACC52564C83A0037DE23 /* AgendaProtocols.swift in Sources */,
+				2927A50525675AAA00F4A6E1 /* AgendaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

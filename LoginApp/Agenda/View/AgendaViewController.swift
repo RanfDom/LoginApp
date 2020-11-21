@@ -28,11 +28,23 @@ class AgendaViewController: UIViewController {
         super.viewDidLoad()
         self.contactsTableView.delegate = self
         self.contactsTableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         controller?.validateContacts()
     }
 }
 
 extension AgendaViewController: AgendaViewable {
+    
+    func presentAlert(with title: String, message: String) {
+        let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { (_) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     func showRegisterView(_ isHidden: Bool) {
         UIView.animate(withDuration: 0.5) {
@@ -46,14 +58,34 @@ extension AgendaViewController: AgendaViewable {
     }
 }
 
-extension AgendaViewController: UITableViewDelegate, UITableViewDataSource {
+extension AgendaViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // codigo para responder al tap de una celda
+    }
+}
+
+extension AgendaViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { // construcción de celdas
+                
+        guard let cell: AgendaTableViewCell = contactsTableView.dequeueReusableCell(withIdentifier: AgendaTableViewCell.reuseID, for: indexPath) as? AgendaTableViewCell else { return UITableViewCell()}
+        
+        let contact: ContactItem = self.contacts[indexPath.row]
+            
+        cell.nameLabel.text = contact.name
+        cell.delegate = self
+        
+        return cell
     }
     
+}
+
+extension AgendaViewController: AgendaTableViewCellDelegate {
+    func buttonGreetDidPressed(at indexPath: IndexPath) {
+        controller?.greetUser(at: indexPath)
+    }
 }

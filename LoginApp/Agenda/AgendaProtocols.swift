@@ -12,12 +12,14 @@ protocol AgendaControllable {
     var view: AgendaViewable? { get set }
     
     func registerContact(with data: NewContactItem)
+    func greetUser(at indexPath: IndexPath)
     func validateContacts()
 }
 
 protocol AgendaViewable {
     var controller: AgendaControllable? { get set }
     
+    func presentAlert(with title: String, message: String)
     func showRegisterView(_ isHidden: Bool)
     func updateTableView(with contacts: [ContactItem])
 }

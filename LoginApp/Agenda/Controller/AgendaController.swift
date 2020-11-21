@@ -50,10 +50,13 @@ extension AgendaController: AgendaControllable {
     
     func validateContacts() {
         userContacts = getContacts()
-        if userContacts.isEmpty {
-            view?.showRegisterView(false)
-        } else {
-            view?.updateTableView(with: userContacts)
+        DispatchQueue.main.async { [weak self] in
+            guard let userContacts = self?.userContacts else { return }
+            if userContacts.isEmpty {
+                self?.view?.showRegisterView(false)
+            } else {
+                self?.view?.updateTableView(with: userContacts)
+            }
         }
     }
     
@@ -79,4 +82,11 @@ extension AgendaController: AgendaControllable {
         }
     }
     
+    func greetUser(at indexPath: IndexPath) {
+        let contact: ContactData = userContacts[indexPath.row]
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.view?.presentAlert(with: "Hola", message: "Hola \(contact.name)")
+        }
+    }
 }
