@@ -22,17 +22,27 @@ class AgendaViewController: UIViewController {
         guard let name: String = newContactTxtField.text else { return }
         let contact: NewContactItem = NewContactItem(name: name)
         controller?.registerContact(with: contact)
+        showRegisterView(true)
+        newContactTxtField.text = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.contactsTableView.delegate = self
         self.contactsTableView.dataSource = self
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         controller?.validateContacts()
+    }
+
+    @objc
+    private func addAction() {
+        guard registerView.isHidden else { return }
+        showRegisterView(false)
     }
 }
 
@@ -82,6 +92,20 @@ extension AgendaViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleterAction = UIContextualAction(style: .destructive, title: "Borrar") { (_ , _, complete ) in
+            // manejar la eliminación de algún item
+            self.controller?.deleteContact(at: indexPath)
+            complete(true)
+        }
+        
+        deleterAction.backgroundColor = .red
+        
+        let config = UISwipeActionsConfiguration(actions: [deleterAction])
+        config.performsFirstActionWithFullSwipe = true
+        
+        return config
+    }
 }
 
 extension AgendaViewController: AgendaTableViewCellDelegate {

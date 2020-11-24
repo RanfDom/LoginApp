@@ -20,12 +20,15 @@ class RegisterController: RegisterControllerProtocol {
         let context = appDelegate.persistentContainer.viewContext
         
         // 2
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)!
-        let usr = NSManagedObject(entity: entity, insertInto: context)
+        let user = User(context: context)
+//        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)!
+//        let usr = NSManagedObject(entity: entity, insertInto: context)
         
         // 3
-        usr.setValue(name, forKey: "name")
-        usr.setValue(pwd, forKey: "pwd")
+        user.name = name
+        user.pwd = pwd
+//        usr.setValue(name, forKey: "name")
+//        usr.setValue(pwd, forKey: "pwd")
         
         // 4
         do {

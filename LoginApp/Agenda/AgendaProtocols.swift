@@ -13,6 +13,7 @@ protocol AgendaControllable {
     
     func registerContact(with data: NewContactItem)
     func greetUser(at indexPath: IndexPath)
+    func deleteContact(at indexPath: IndexPath)
     func validateContacts()
 }
 

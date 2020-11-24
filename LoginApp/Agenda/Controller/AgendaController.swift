@@ -24,7 +24,7 @@ class AgendaController {
         let context = appDelegate.persistentContainer.viewContext
         
         // 2
-        let request: NSFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Contact")
+        let request: NSFetchRequest = Contact.fetchRequest()
                
         // 3
         do {
@@ -49,13 +49,13 @@ class AgendaController {
 extension AgendaController: AgendaControllable {
     
     func validateContacts() {
-        userContacts = getContacts()
         DispatchQueue.main.async { [weak self] in
-            guard let userContacts = self?.userContacts else { return }
-            if userContacts.isEmpty {
+            guard let contacts = self?.getContacts() else { return }
+            self?.userContacts = contacts
+            if contacts.isEmpty {
                 self?.view?.showRegisterView(false)
             } else {
-                self?.view?.updateTableView(with: userContacts)
+                self?.view?.updateTableView(with: contacts)
             }
         }
     }
@@ -67,19 +67,20 @@ extension AgendaController: AgendaControllable {
         let context = appDelegate.persistentContainer.viewContext
         
         // 2 -
-        let entity = NSEntityDescription.entity(forEntityName: "Contact", in: context)!
-        let usr = NSManagedObject(entity: entity, insertInto: context)
-        
+        let contact = Contact(context: context)
         // 3
-        usr.setValue(data.name, forKey: "name") // KVC -> Key Value Coding
+//        usr.setValue(data.name, forKey: "name") // KVC -> Key Value Coding
+        contact.name = data.name
+
         // 4
         do {
             try context.save()
-            userContacts.append(ContactData(data.name))
-            view?.updateTableView(with: userContacts)
+//            userContacts.append(ContactData(data.name))
+//            view?.updateTableView(with: userContacts)
         } catch let error as NSError {
             print("No se puede guardar el usuario. Eror:\(error.userInfo)")
         }
+        validateContacts()
     }
     
     func greetUser(at indexPath: IndexPath) {
@@ -87,6 +88,33 @@ extension AgendaController: AgendaControllable {
         
         DispatchQueue.main.async { [weak self] in
             self?.view?.presentAlert(with: "Hola", message: "Hola \(contact.name)")
+        }
+    }
+
+    func deleteContact(at indexPath: IndexPath) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        let fetchRequest: NSFetchRequest = Contact.fetchRequest()
+
+        do {
+            let contactsData = try context.fetch(fetchRequest)
+
+            for contact in contactsData {
+                if contact.name == userContacts[indexPath.row].name {
+                    context.delete(contact)
+                }
+            }
+
+            do {
+                try context.save()
+                self.validateContacts()
+            } catch let error as NSError {
+                print("Could not save: \(error.userInfo)")
+            }
+
+        } catch let error as NSError {
+            print("Error: \(error.userInfo)")
         }
     }
 }

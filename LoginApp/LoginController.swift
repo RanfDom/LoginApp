@@ -26,18 +26,16 @@ class LoginController: LoginControllerProtocol {
         let context = appDelegate.persistentContainer.viewContext
         
         // 2
-        let request: NSFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
+        let request: NSFetchRequest = User.fetchRequest()
                
         // 3
         do {
             let result = try context.fetch(request)
-            let managedResult = result as [NSManagedObject]
-            userData = getModel(with: managedResult.first!)
+            userData = getModel(with: result.first!)
             view?.updateView(with: userData!)
         } catch let error as NSError {
             print("Error, no ha sido posible cargar user: \(error.userInfo)")
         }
-        
     }
     
     var view: LoginViewProtocol?
@@ -53,8 +51,9 @@ class LoginController: LoginControllerProtocol {
     }
     
     private func getModel(with data: NSManagedObject) -> LoginEntityModel? {
-        guard let name: String = data.value(forKey: "name") as? String else { return nil }
-        guard let pwd: String = data.value(forKey: "pwd") as? String else { return nil }
+        guard let managedUser: User = data as? User else { return nil }
+        guard let name: String = managedUser.name else { return nil }
+        guard let pwd: String = managedUser.pwd else { return nil }
         
         let model: LoginEntityModel = LoginEntityModel(name: name, pwd: pwd)
         return model

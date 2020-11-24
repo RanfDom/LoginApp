@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let context = appDelegate.persistentContainer.viewContext
         
         // 2
-        let request: NSFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
+        let request: NSFetchRequest = User.fetchRequest()
         
         // 3
         do {

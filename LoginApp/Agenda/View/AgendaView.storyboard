@@ -84,7 +84,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="2Zg-Mp-6Iv" firstAttribute="top" secondItem="pig-Yh-bin" secondAttribute="top" constant="58" id="0UI-Qt-ovn"/>
                                     <constraint firstItem="Mcx-OM-gR7" firstAttribute="centerX" secondItem="pig-Yh-bin" secondAttribute="centerX" id="1s3-hd-4pl"/>
