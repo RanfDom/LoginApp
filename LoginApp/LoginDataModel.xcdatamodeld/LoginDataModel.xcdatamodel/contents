@@ -2,13 +2,20 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Contact" representedClassName="Contact" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="phoneNumber" optional="YES" toMany="YES" maxCount="3" deletionRule="Cascade" destinationEntity="PhoneNumber" inverseName="toContact" inverseEntity="PhoneNumber"/>
+    </entity>
+    <entity name="PhoneNumber" representedClassName="PhoneNumber" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="toContact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="phoneNumber" inverseEntity="Contact"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="pwd" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Contact" positionX="-45" positionY="18" width="128" height="58"/>
+        <element name="Contact" positionX="-45" positionY="18" width="128" height="73"/>
         <element name="User" positionX="-54" positionY="-9" width="128" height="73"/>
+        <element name="PhoneNumber" positionX="-45" positionY="9" width="128" height="88"/>
     </elements>
 </model>

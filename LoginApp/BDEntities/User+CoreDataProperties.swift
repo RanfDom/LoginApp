@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  
 //
-//  Created by Ranferi Dominguez Rios on 23/11/20.
+//  Created by Ranferi Dominguez Rios on 24/11/20.
 //
 //
 
