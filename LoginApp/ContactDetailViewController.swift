@@ -24,6 +24,7 @@ class ContactDetailViewController: UIViewController {
         super.viewDidLoad()
         
         phoneNumberTable.dataSource = self
+        phoneNumberTable.delegate = self
         phoneNumberTable.register(UITableViewCell.self, forCellReuseIdentifier: "Default")
         dbContact = getContactData()
         contactDetail = ContactDetailVM(contact: dbContact!)
@@ -50,6 +51,10 @@ class ContactDetailViewController: UIViewController {
         }
         
         contactDetail = ContactDetailVM(contact: dbContact!)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.phoneNumberTable.reloadData()
+        }
     }
 
     func getContactData() -> Contact? {
@@ -91,5 +96,15 @@ extension ContactDetailViewController: UITableViewDataSource {
         return cell
     }
     
-    
+}
+
+extension ContactDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let phoneNumber = contactDetail?.phoneNumers[indexPath.row].number else { return }
+        
+        if let url = URL(string: "tel://\(phoneNumber)"), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }

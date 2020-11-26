@@ -11,8 +11,18 @@ import UIKit
 
 class AgendaWireFrame: AgendaWireframe {
     
-    static func buildRegisterModule() -> Any {
+    static func buildAgendaTableModule() -> Any {
         let view = UIStoryboard(name: "AgendaView", bundle: nil).instantiateViewController(identifier: "AgendaView") as! AgendaViewController
+        let controller = AgendaController()
+        
+        controller.view = view
+        view.controller = controller
+        
+        return view
+    }
+    
+    static func buildAgendaGridModule() -> Any {
+        let view = UIStoryboard(name: "AgendaGridView", bundle: nil).instantiateViewController(identifier: "AgendaGridView") as! AgendaGridViewController
         let controller = AgendaController()
         
         controller.view = view

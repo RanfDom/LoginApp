@@ -22,9 +22,10 @@ protocol AgendaViewable {
     
     func presentAlert(with title: String, message: String)
     func showRegisterView(_ isHidden: Bool)
-    func updateTableView(with contacts: [ContactItem])
+    func updateView(with contacts: [ContactItem])
 }
 
 protocol AgendaWireframe: class {
-    static func buildRegisterModule() -> Any
+    static func buildAgendaTableModule() -> Any
+    static func buildAgendaGridModule() -> Any
 }

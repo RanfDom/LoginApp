@@ -62,7 +62,7 @@ extension AgendaViewController: AgendaViewable {
         }
     }
     
-    func updateTableView(with contacts: [ContactItem]) {
+    func updateView(with contacts: [ContactItem]) {
         self.contacts = contacts
         self.contactsTableView.reloadData()
     }
@@ -72,6 +72,7 @@ extension AgendaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let controller = ContactDetailWireframe.buildLoginModule() as! ContactDetailViewController
         controller.contactDetail = ContactDetailVM(name: contacts[indexPath.row].name, phoneNumers: [])
+        //self.navigationController?.pushViewController(controller, animated: true)
         self.present(controller, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

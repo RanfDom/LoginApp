@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		07D585728252AB1A11369D11 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */; };
+		2915D3A2256F459300A9D192 /* AgendaGridView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2915D3A1256F459300A9D192 /* AgendaGridView.storyboard */; };
+		2915D3A4256F46E700A9D192 /* AgendaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */; };
+		2915D3A6256F4F3800A9D192 /* AgendaGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */; };
 		2927A50525675AAA00F4A6E1 /* AgendaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */; };
 		2932D1AF255246B800005015 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932D1AE255246B800005015 /* Weather.swift */; };
 		2935ACBA2564C2EE0037DE23 /* AgendaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2915D3A1256F459300A9D192 /* AgendaGridView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaGridView.storyboard; sourceTree = "<group>"; };
+		2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaGridViewController.swift; sourceTree = "<group>"; };
+		2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaGridCell.swift; sourceTree = "<group>"; };
 		2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTableViewCell.swift; sourceTree = "<group>"; };
 		2932D1AE255246B800005015 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaView.storyboard; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 				2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */,
 				2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */,
 				2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */,
+				2915D3A1256F459300A9D192 /* AgendaGridView.storyboard */,
+				2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */,
+				2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2976E2D8254A56270018CAB3 /* Login.storyboard in Resources */,
+				2915D3A2256F459300A9D192 /* AgendaGridView.storyboard in Resources */,
 				299FB442256DF93600EEB790 /* ContactDetailViewController.storyboard in Resources */,
 				2976E2CD254A55CE0018CAB3 /* LaunchScreen.storyboard in Resources */,
 				2976E2CA254A55CE0018CAB3 /* Assets.xcassets in Resources */,
@@ -488,12 +498,14 @@
 				2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */,
 				2976E2DA254A568F0018CAB3 /* LoginViewController.swift in Sources */,
 				2976E2F1254A69600018CAB3 /* RegisterWireFrame.swift in Sources */,
+				2915D3A4256F46E700A9D192 /* AgendaGridViewController.swift in Sources */,
 				299FB444256DFAD600EEB790 /* ContactDetailViewController.swift in Sources */,
 				2976E2F3254A69E90018CAB3 /* RegisterController.swift in Sources */,
 				2976E2E0254A594A0018CAB3 /* LoginController.swift in Sources */,
 				2932D1AF255246B800005015 /* Weather.swift in Sources */,
 				2976E2DD254A56FE0018CAB3 /* LoginProtocols.swift in Sources */,
 				2976E2EF254A69100018CAB3 /* RegisterProtocols.swift in Sources */,
+				2915D3A6256F4F3800A9D192 /* AgendaGridCell.swift in Sources */,
 				299FB43D256DF6E200EEB790 /* PhoneNumber+CoreDataProperties.swift in Sources */,
 				2976E2EB254A683B0018CAB3 /* RegisterViewController.swift in Sources */,
 				299FB43A256DF6E200EEB790 /* Contact+CoreDataProperties.swift in Sources */,

@@ -55,7 +55,7 @@ extension AgendaController: AgendaControllable {
             if contacts.isEmpty {
                 self?.view?.showRegisterView(false)
             } else {
-                self?.view?.updateTableView(with: contacts)
+                self?.view?.updateView(with: contacts)
             }
         }
     }
