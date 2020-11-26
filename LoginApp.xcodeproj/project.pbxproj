@@ -38,6 +38,9 @@
 		299FB43C256DF6E200EEB790 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FB436256DF6E200EEB790 /* User+CoreDataClass.swift */; };
 		299FB43D256DF6E200EEB790 /* PhoneNumber+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FB437256DF6E200EEB790 /* PhoneNumber+CoreDataProperties.swift */; };
 		299FB442256DF93600EEB790 /* ContactDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 299FB441256DF93600EEB790 /* ContactDetailViewController.storyboard */; };
+		299FB444256DFAD600EEB790 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FB443256DFAD600EEB790 /* ContactDetailViewController.swift */; };
+		299FB447256DFD2D00EEB790 /* ContactDetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FB446256DFD2D00EEB790 /* ContactDetailEntities.swift */; };
+		299FB44A256DFE0700EEB790 /* ContactDetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299FB449256DFE0700EEB790 /* ContactDetailWireFrame.swift */; };
 		29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29CD0155255F70A9002B5B4E /* LoginDataModel.xcdatamodeld */; };
 		29CD017C255F8209002B5B4E /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD017B255F8209002B5B4E /* LoginEntity.swift */; };
 		29DF41BA25660C4500C4D038 /* AgendaWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */; };
@@ -77,6 +80,9 @@
 		299FB436256DF6E200EEB790 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		299FB437256DF6E200EEB790 /* PhoneNumber+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhoneNumber+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		299FB441256DF93600EEB790 /* ContactDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactDetailViewController.storyboard; sourceTree = "<group>"; };
+		299FB443256DFAD600EEB790 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		299FB446256DFD2D00EEB790 /* ContactDetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailEntities.swift; sourceTree = "<group>"; };
+		299FB449256DFE0700EEB790 /* ContactDetailWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailWireFrame.swift; sourceTree = "<group>"; };
 		29CD0156255F70A9002B5B4E /* LoginDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginDataModel.xcdatamodel; sourceTree = "<group>"; };
 		29CD017B255F8209002B5B4E /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaWireFrame.swift; sourceTree = "<group>"; };
@@ -281,6 +287,8 @@
 		299FB43E256DF8F400EEB790 /* ContactDetail */ = {
 			isa = PBXGroup;
 			children = (
+				299FB448256DFDE300EEB790 /* WireFrame */,
+				299FB445256DFD0E00EEB790 /* Entities */,
 				299FB440256DF91600EEB790 /* View */,
 			);
 			name = ContactDetail;
@@ -290,8 +298,25 @@
 			isa = PBXGroup;
 			children = (
 				299FB441256DF93600EEB790 /* ContactDetailViewController.storyboard */,
+				299FB443256DFAD600EEB790 /* ContactDetailViewController.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		299FB445256DFD0E00EEB790 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				299FB446256DFD2D00EEB790 /* ContactDetailEntities.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		299FB448256DFDE300EEB790 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				299FB449256DFE0700EEB790 /* ContactDetailWireFrame.swift */,
+			);
+			name = WireFrame;
 			sourceTree = "<group>";
 		};
 		29CD0154255F7083002B5B4E /* Data */ = {
@@ -463,6 +488,7 @@
 				2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */,
 				2976E2DA254A568F0018CAB3 /* LoginViewController.swift in Sources */,
 				2976E2F1254A69600018CAB3 /* RegisterWireFrame.swift in Sources */,
+				299FB444256DFAD600EEB790 /* ContactDetailViewController.swift in Sources */,
 				2976E2F3254A69E90018CAB3 /* RegisterController.swift in Sources */,
 				2976E2E0254A594A0018CAB3 /* LoginController.swift in Sources */,
 				2932D1AF255246B800005015 /* Weather.swift in Sources */,
@@ -472,6 +498,7 @@
 				2976E2EB254A683B0018CAB3 /* RegisterViewController.swift in Sources */,
 				299FB43A256DF6E200EEB790 /* Contact+CoreDataProperties.swift in Sources */,
 				2976E2C5254A55C70018CAB3 /* ViewController.swift in Sources */,
+				299FB447256DFD2D00EEB790 /* ContactDetailEntities.swift in Sources */,
 				2976E2E4254A656D0018CAB3 /* LoginWireframe.swift in Sources */,
 				2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */,
 				2935ACBE2564C4B20037DE23 /* AgendaViewController.swift in Sources */,
@@ -481,6 +508,7 @@
 				299FB439256DF6E200EEB790 /* PhoneNumber+CoreDataClass.swift in Sources */,
 				299FB43C256DF6E200EEB790 /* User+CoreDataClass.swift in Sources */,
 				299FB438256DF6E200EEB790 /* User+CoreDataProperties.swift in Sources */,
+				299FB44A256DFE0700EEB790 /* ContactDetailWireFrame.swift in Sources */,
 				29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */,
 				2935ACC52564C83A0037DE23 /* AgendaProtocols.swift in Sources */,
 				299FB43B256DF6E200EEB790 /* Contact+CoreDataClass.swift in Sources */,

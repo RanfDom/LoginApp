@@ -70,7 +70,10 @@ extension AgendaViewController: AgendaViewable {
 
 extension AgendaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // codigo para responder al tap de una celda
+        let controller = ContactDetailWireframe.buildLoginModule() as! ContactDetailViewController
+        controller.contactDetail = ContactDetailVM(name: contacts[indexPath.row].name, phoneNumers: [])
+        self.present(controller, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
