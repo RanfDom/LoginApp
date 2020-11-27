@@ -31,7 +31,11 @@ class PageViewController: UIPageViewController {
     }
     
     private func newStepViewController(step: String) -> UIViewController {
-        return UIStoryboard(name: "PagerView", bundle: nil).instantiateViewController(identifier: "\(step)ViewController")
+        let controller = UIStoryboard(name: "PagerView", bundle: nil).instantiateViewController(identifier: "\(step)ViewController")
+        if let finalStepController = controller as? FinalStepViewController {
+            finalStepController.delegate = self
+        }
+        return controller
     }
 }
 
@@ -74,7 +78,12 @@ extension PageViewController: UIPageViewControllerDataSource {
             let firstViewControllerIndex = orderedViewControllers.firstIndex(of: firstController) else {
                 return 0
         }
-
         return firstViewControllerIndex
+    }
+}
+
+extension PageViewController: FinalStepDelegate {
+    func nextControllerPressed() {
+        print("Show Next controller")
     }
 }

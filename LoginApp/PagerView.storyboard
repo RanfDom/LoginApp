@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="-40" y="851"/>
         </scene>
-        <!--View Controller-->
+        <!--Final Step View Controller-->
         <scene sceneID="QKj-3v-vrh">
             <objects>
-                <viewController storyboardIdentifier="3ViewController" id="ZPR-T0-Phl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="3ViewController" id="ZPR-T0-Phl" customClass="FinalStepViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z9D-RI-Gme">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,10 +93,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cew-9a-1aQ">
+                                <rect key="frame" x="159.5" y="734" width="95" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="NKe-Y8-xU1"/>
+                                    <constraint firstAttribute="height" constant="57" id="nmT-Iv-dCu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="Iniciar"/>
+                                <connections>
+                                    <action selector="beginButtonPressed:" destination="ZPR-T0-Phl" eventType="touchUpInside" id="442-P5-fRX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="M23-wZ-pQI" firstAttribute="bottom" secondItem="Cew-9a-1aQ" secondAttribute="bottom" constant="71" id="1v9-7U-WDk"/>
                             <constraint firstItem="csb-3R-wnZ" firstAttribute="centerX" secondItem="z9D-RI-Gme" secondAttribute="centerX" id="MjW-wc-bQn"/>
+                            <constraint firstItem="Cew-9a-1aQ" firstAttribute="centerX" secondItem="z9D-RI-Gme" secondAttribute="centerX" id="W2G-ey-A55"/>
                             <constraint firstItem="csb-3R-wnZ" firstAttribute="centerY" secondItem="z9D-RI-Gme" secondAttribute="centerY" id="t6P-kK-oOY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M23-wZ-pQI"/>
