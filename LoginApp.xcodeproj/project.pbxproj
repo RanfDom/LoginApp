@@ -18,6 +18,8 @@
 		2935ACC12564C5CA0037DE23 /* AgendaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC02564C5CA0037DE23 /* AgendaModel.swift */; };
 		2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC22564C82A0037DE23 /* AgendaController.swift */; };
 		2935ACC52564C83A0037DE23 /* AgendaProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */; };
+		2938061B2570976D00F09163 /* PagerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2938061A2570976D00F09163 /* PagerView.storyboard */; };
+		2938061D257097CB00F09163 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938061C257097CB00F09163 /* PageViewController.swift */; };
 		2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C0254A55C70018CAB3 /* AppDelegate.swift */; };
 		2976E2C3254A55C70018CAB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C2254A55C70018CAB3 /* SceneDelegate.swift */; };
 		2976E2C5254A55C70018CAB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C4254A55C70018CAB3 /* ViewController.swift */; };
@@ -61,6 +63,8 @@
 		2935ACC02564C5CA0037DE23 /* AgendaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaModel.swift; sourceTree = "<group>"; };
 		2935ACC22564C82A0037DE23 /* AgendaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaController.swift; sourceTree = "<group>"; };
 		2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaProtocols.swift; sourceTree = "<group>"; };
+		2938061A2570976D00F09163 /* PagerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PagerView.storyboard; sourceTree = "<group>"; };
+		2938061C257097CB00F09163 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		2976E2BD254A55C70018CAB3 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2976E2C0254A55C70018CAB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2976E2C2254A55C70018CAB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		293806182570973700F09163 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				293806192570975500F09163 /* View */,
+			);
+			name = Pager;
+			sourceTree = "<group>";
+		};
+		293806192570975500F09163 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2938061A2570976D00F09163 /* PagerView.storyboard */,
+				2938061C257097CB00F09163 /* PageViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		2976E2B4254A55C60018CAB3 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +208,7 @@
 		2976E2BF254A55C70018CAB3 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				293806182570973700F09163 /* Pager */,
 				299FB43E256DF8F400EEB790 /* ContactDetail */,
 				29D3092C256C9FF1007F96DB /* BDEntities */,
 				2935ACB72564C2C00037DE23 /* Agenda */,
@@ -441,6 +463,7 @@
 				2976E2CA254A55CE0018CAB3 /* Assets.xcassets in Resources */,
 				2935ACBA2564C2EE0037DE23 /* AgendaView.storyboard in Resources */,
 				2976E2C8254A55C70018CAB3 /* Main.storyboard in Resources */,
+				2938061B2570976D00F09163 /* PagerView.storyboard in Resources */,
 				2976E2E9254A681C0018CAB3 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +532,7 @@
 				299FB43D256DF6E200EEB790 /* PhoneNumber+CoreDataProperties.swift in Sources */,
 				2976E2EB254A683B0018CAB3 /* RegisterViewController.swift in Sources */,
 				299FB43A256DF6E200EEB790 /* Contact+CoreDataProperties.swift in Sources */,
+				2938061D257097CB00F09163 /* PageViewController.swift in Sources */,
 				2976E2C5254A55C70018CAB3 /* ViewController.swift in Sources */,
 				299FB447256DFD2D00EEB790 /* ContactDetailEntities.swift in Sources */,
 				2976E2E4254A656D0018CAB3 /* LoginWireframe.swift in Sources */,

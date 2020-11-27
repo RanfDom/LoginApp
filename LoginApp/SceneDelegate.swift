@@ -25,6 +25,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window = UIWindow(windowScene: wScene)
         
+        /*
+         Mostrar tutorial solo la primera vez / la primera actualización
+         */
+        let controller = UIStoryboard(name: "PagerView", bundle: nil).instantiateViewController(identifier: "PagerViewController")
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [controller]
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+        
+        /*
         var usrData: [NSManagedObject] = []
         
         // 1
@@ -55,6 +65,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+ */
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
