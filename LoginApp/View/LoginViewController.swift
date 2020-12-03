@@ -11,7 +11,12 @@ import UIKit
 import FBSDKLoginKit
 import SDWebImage
 
-class LoginViewController: UIViewController, LoginViewProtocol {
+typealias LoginProtocols = LoginViewProtocol&Greetable&LoadableViewController
+
+class LoginViewController: UIViewController, LoginProtocols {
+    
+    static var storyboardFileName: String = "LoginViewController"
+    
     
     var controller: LoginControllerProtocol?
     
@@ -41,6 +46,11 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         }
         
         controller?.getUserInfo()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        greet()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

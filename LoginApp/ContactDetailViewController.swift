@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 import CoreData
 
-class ContactDetailViewController: UIViewController {
+class ContactDetailViewController: UIViewController, LoadableViewController {
+    
+    static var storyboardFileName: String = "ContactDetailViewController"
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var phoneNumberTable: UITableView!
@@ -19,6 +22,8 @@ class ContactDetailViewController: UIViewController {
     
     var contactDetail: ContactDetailVM?
     var dbContact: Contact?
+    
+    typealias ContactPhoneNumber = String
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +88,10 @@ class ContactDetailViewController: UIViewController {
         }
         return nil
     }
+    
+    func getSelectedPhoneNumber(from indexPath: IndexPath) -> ContactPhoneNumber {
+        return contactDetail?.phoneNumers[indexPath.row].number ?? ""
+    }
 }
 
 extension ContactDetailViewController: UITableViewDataSource {
@@ -101,7 +110,7 @@ extension ContactDetailViewController: UITableViewDataSource {
 extension ContactDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let phoneNumber = contactDetail?.phoneNumers[indexPath.row].number else { return }
+        let phoneNumber = getSelectedPhoneNumber(from: indexPath)
         
         if let url = URL(string: "tel://\(phoneNumber)"), UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)

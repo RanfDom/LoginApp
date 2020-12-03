@@ -28,6 +28,6 @@ protocol LoginViewProtocol {
 }
 
 // MARK: Wireframe
-protocol LoginWireframe: class {
-    static func buildLoginModule() -> Any
+protocol LoginWireframeProtocol: class {
+    static func buildLoginModule() -> LoginViewController
 }

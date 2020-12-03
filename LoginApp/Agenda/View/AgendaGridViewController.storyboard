@@ -11,7 +11,7 @@
         <!--Agenda Grid View Controller-->
         <scene sceneID="7QW-XO-EnC">
             <objects>
-                <viewController storyboardIdentifier="AgendaGridView" id="rJp-eG-U3o" customClass="AgendaGridViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AgendaGridViewController" id="rJp-eG-U3o" customClass="AgendaGridViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PxS-JE-6go">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

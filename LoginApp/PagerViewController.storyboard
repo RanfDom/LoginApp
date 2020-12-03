@@ -123,7 +123,7 @@
         <!--Page View Controller-->
         <scene sceneID="5am-hs-3GK">
             <objects>
-                <pageViewController storyboardIdentifier="PagerViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2yZ-ee-Hc3" customClass="PageViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2yZ-ee-Hc3" customClass="PageViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCW-7Q-pce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-54" y="87"/>

@@ -17,15 +17,14 @@ protocol AgendaControllable {
     func validateContacts()
 }
 
-protocol AgendaViewable {
+protocol AgendaViewable: Alertable {
     var controller: AgendaControllable? { get set }
     
-    func presentAlert(with title: String, message: String)
     func showRegisterView(_ isHidden: Bool)
-    func updateView(with contacts: [ContactItem])
+    func updateView(with contacts: Contacts)
 }
 
-protocol AgendaWireframe: class {
-    static func buildAgendaTableModule() -> Any
-    static func buildAgendaGridModule() -> Any
+protocol AgendaWireframeProtocol: class {
+    static func buildAgendaTableModule() -> AgendaViewController
+    static func buildAgendaGridModule() -> AgendaGridViewController
 }

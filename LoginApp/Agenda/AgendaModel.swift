@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Contacts = [ContactItem]
+
 protocol ContactItem {
     var name: String { get set }
 }

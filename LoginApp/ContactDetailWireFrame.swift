@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class ContactDetailWireframe {
+protocol ContactDetailWireframeProtocol {
+    static func buildContactDetailModule() -> ContactDetailViewController
+}
+class ContactDetailWireframe: ContactDetailWireframeProtocol {
     
-    static func buildLoginModule() -> Any {
-        let viewController = UIStoryboard(name: "ContactDetailViewController", bundle: nil).instantiateViewController(identifier: "ContactDetailViewController") as! ContactDetailViewController
-        
-        return viewController
+    static func buildContactDetailModule() -> ContactDetailViewController {
+        return ContactDetailViewController.instantiate()
     }
 
 }

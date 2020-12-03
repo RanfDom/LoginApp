@@ -25,6 +25,6 @@ protocol RegisterViewProtocol {
 }
 
 // MARK: Wireframe
-protocol RegisterWireframe: class {
-    static func buildRegisterModule() -> Any
+protocol RegisterWireframeProtocol: class {
+    static func buildRegisterModule() -> RegisterViewController
 }

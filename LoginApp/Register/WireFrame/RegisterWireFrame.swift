@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class RegisterWireFrame: RegisterWireframe {
+class RegisterWireFrame: RegisterWireframeProtocol {
     
-    static func buildRegisterModule() -> Any {
-        let view = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(identifier: "Register") as! RegisterViewController
+    static func buildRegisterModule() -> RegisterViewController {
+        let view = RegisterViewController.instantiate()
         let controller = RegisterController()
         
         controller.view = view

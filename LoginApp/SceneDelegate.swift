@@ -28,13 +28,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         /*
          Mostrar tutorial solo la primera vez / la primera actualización
          */
-        let controller = UIStoryboard(name: "PagerView", bundle: nil).instantiateViewController(identifier: "PagerViewController")
+        
+        /*
+        let controller = PageViewController.instantiate()
         let navigationController = UINavigationController()
         navigationController.viewControllers = [controller]
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+         */
         
-        /*
         var usrData: [NSManagedObject] = []
         
         // 1
@@ -49,23 +51,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let result = try context.fetch(request)
             usrData = result as [NSManagedObject]
         } catch let error as NSError {
-            print("Error, no ha sido posible cargar user")
+            print("Error, no ha sido posible cargar user: \(error.userInfo)")
         }
         
         // 4 hacer uso del response.
         let navigationController = UINavigationController()
         if !usrData.isEmpty {
             // Usuario Registrado
-            guard let controller = LoginWireFrame.buildLoginModule() as? UIViewController else { return }
+            let controller = LoginWireFrame.buildLoginModule()
             navigationController.viewControllers = [controller]
         } else {
-            guard let controller = RegisterWireFrame.buildRegisterModule() as? UIViewController else { return }
+            let controller = RegisterWireFrame.buildRegisterModule()
             navigationController.viewControllers = [controller]
         }
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
- */
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

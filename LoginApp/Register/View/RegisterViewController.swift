@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-class RegisterViewController: UIViewController, RegisterViewProtocol {
+class RegisterViewController: UIViewController, RegisterViewProtocol, LoadableViewController {
+    
+    static var storyboardFileName: String = "RegisterViewController"
+    
     var controller: RegisterControllerProtocol?
     
     @IBOutlet weak var nameTextField: UITextField!

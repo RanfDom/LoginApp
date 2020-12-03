@@ -45,6 +45,4 @@ class RegisterController: RegisterControllerProtocol {
         let alert = UIAlertController(title: "Registro Exitoso", message: "\(name.capitalized)", preferredStyle: .alert)
         view?.present(alert: alert)
     }
-    
-    
 }

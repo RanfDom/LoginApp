@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class LoginWireFrame: LoginWireframe {
+class LoginWireFrame: LoginWireframeProtocol {
     
-    static func buildLoginModule() -> Any {
-        let viewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(identifier: "Login") as! LoginViewController
+    static func buildLoginModule() -> LoginViewController {
+        let viewController = LoginViewController.instantiate()
         let logincController = LoginController()
         
         logincController.view = viewController

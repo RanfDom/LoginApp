@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		07D585728252AB1A11369D11 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */; };
-		2915D3A2256F459300A9D192 /* AgendaGridView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2915D3A1256F459300A9D192 /* AgendaGridView.storyboard */; };
+		2915D3A2256F459300A9D192 /* AgendaGridViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2915D3A1256F459300A9D192 /* AgendaGridViewController.storyboard */; };
 		2915D3A4256F46E700A9D192 /* AgendaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */; };
 		2915D3A6256F4F3800A9D192 /* AgendaGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */; };
 		2927A50525675AAA00F4A6E1 /* AgendaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */; };
 		2932D1AF255246B800005015 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932D1AE255246B800005015 /* Weather.swift */; };
-		2935ACBA2564C2EE0037DE23 /* AgendaView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */; };
+		2935ACBA2564C2EE0037DE23 /* AgendaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2935ACB92564C2EE0037DE23 /* AgendaViewController.storyboard */; };
 		2935ACBE2564C4B20037DE23 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */; };
 		2935ACC12564C5CA0037DE23 /* AgendaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC02564C5CA0037DE23 /* AgendaModel.swift */; };
 		2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC22564C82A0037DE23 /* AgendaController.swift */; };
 		2935ACC52564C83A0037DE23 /* AgendaProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */; };
-		2938061B2570976D00F09163 /* PagerView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2938061A2570976D00F09163 /* PagerView.storyboard */; };
+		2938061B2570976D00F09163 /* PagerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2938061A2570976D00F09163 /* PagerViewController.storyboard */; };
 		2938061D257097CB00F09163 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938061C257097CB00F09163 /* PageViewController.swift */; };
 		2938061F2570A7DF00F09163 /* FinalStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938061E2570A7DF00F09163 /* FinalStepViewController.swift */; };
 		2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C0254A55C70018CAB3 /* AppDelegate.swift */; };
@@ -27,12 +27,12 @@
 		2976E2C8254A55C70018CAB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2976E2C6254A55C70018CAB3 /* Main.storyboard */; };
 		2976E2CA254A55CE0018CAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2976E2C9254A55CE0018CAB3 /* Assets.xcassets */; };
 		2976E2CD254A55CE0018CAB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2976E2CB254A55CE0018CAB3 /* LaunchScreen.storyboard */; };
-		2976E2D8254A56270018CAB3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2976E2D7254A56270018CAB3 /* Login.storyboard */; };
+		2976E2D8254A56270018CAB3 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2976E2D7254A56270018CAB3 /* LoginViewController.storyboard */; };
 		2976E2DA254A568F0018CAB3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2D9254A568F0018CAB3 /* LoginViewController.swift */; };
 		2976E2DD254A56FE0018CAB3 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2DC254A56FE0018CAB3 /* LoginProtocols.swift */; };
 		2976E2E0254A594A0018CAB3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2DF254A594A0018CAB3 /* LoginController.swift */; };
 		2976E2E4254A656D0018CAB3 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2E3254A656D0018CAB3 /* LoginWireframe.swift */; };
-		2976E2E9254A681C0018CAB3 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2976E2E8254A681C0018CAB3 /* Register.storyboard */; };
+		2976E2E9254A681C0018CAB3 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2976E2E8254A681C0018CAB3 /* RegisterViewController.storyboard */; };
 		2976E2EB254A683B0018CAB3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2EA254A683B0018CAB3 /* RegisterViewController.swift */; };
 		2976E2EF254A69100018CAB3 /* RegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2EE254A69100018CAB3 /* RegisterProtocols.swift */; };
 		2976E2F1254A69600018CAB3 /* RegisterWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2F0254A69600018CAB3 /* RegisterWireFrame.swift */; };
@@ -50,21 +50,23 @@
 		29CD0157255F70A9002B5B4E /* LoginDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29CD0155255F70A9002B5B4E /* LoginDataModel.xcdatamodeld */; };
 		29CD017C255F8209002B5B4E /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CD017B255F8209002B5B4E /* LoginEntity.swift */; };
 		29DF41BA25660C4500C4D038 /* AgendaWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */; };
+		29F1F7E72577FB0100AD8549 /* StoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F1F7E62577FB0100AD8549 /* StoryboardExtensions.swift */; };
+		29F4EB2525772F38005E8E78 /* CommonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4EB2425772F38005E8E78 /* CommonProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2915D3A1256F459300A9D192 /* AgendaGridView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaGridView.storyboard; sourceTree = "<group>"; };
+		2915D3A1256F459300A9D192 /* AgendaGridViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaGridViewController.storyboard; sourceTree = "<group>"; };
 		2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaGridViewController.swift; sourceTree = "<group>"; };
 		2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaGridCell.swift; sourceTree = "<group>"; };
 		2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTableViewCell.swift; sourceTree = "<group>"; };
 		2932D1AE255246B800005015 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaView.storyboard; sourceTree = "<group>"; };
+		2935ACB92564C2EE0037DE23 /* AgendaViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaViewController.storyboard; sourceTree = "<group>"; };
 		2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		2935ACC02564C5CA0037DE23 /* AgendaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaModel.swift; sourceTree = "<group>"; };
 		2935ACC22564C82A0037DE23 /* AgendaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaController.swift; sourceTree = "<group>"; };
 		2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaProtocols.swift; sourceTree = "<group>"; };
-		2938061A2570976D00F09163 /* PagerView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PagerView.storyboard; sourceTree = "<group>"; };
+		2938061A2570976D00F09163 /* PagerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PagerViewController.storyboard; sourceTree = "<group>"; };
 		2938061C257097CB00F09163 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		2938061E2570A7DF00F09163 /* FinalStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalStepViewController.swift; sourceTree = "<group>"; };
 		2976E2BD254A55C70018CAB3 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,12 +77,12 @@
 		2976E2C9254A55CE0018CAB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2976E2CC254A55CE0018CAB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2976E2CE254A55CE0018CAB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2976E2D7254A56270018CAB3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2976E2D7254A56270018CAB3 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		2976E2D9254A568F0018CAB3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2976E2DC254A56FE0018CAB3 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		2976E2DF254A594A0018CAB3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		2976E2E3254A656D0018CAB3 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
-		2976E2E8254A681C0018CAB3 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		2976E2E8254A681C0018CAB3 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		2976E2EA254A683B0018CAB3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2976E2EE254A69100018CAB3 /* RegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocols.swift; sourceTree = "<group>"; };
 		2976E2F0254A69600018CAB3 /* RegisterWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWireFrame.swift; sourceTree = "<group>"; };
@@ -98,6 +100,8 @@
 		29CD0156255F70A9002B5B4E /* LoginDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoginDataModel.xcdatamodel; sourceTree = "<group>"; };
 		29CD017B255F8209002B5B4E /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaWireFrame.swift; sourceTree = "<group>"; };
+		29F1F7E62577FB0100AD8549 /* StoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtensions.swift; sourceTree = "<group>"; };
+		29F4EB2425772F38005E8E78 /* CommonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProtocols.swift; sourceTree = "<group>"; };
 		C795C6741BFD36ECA8177D6B /* Pods-LoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.release.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.release.xcconfig"; sourceTree = "<group>"; };
 		D872FFBB37942B78D68517F0 /* Pods-LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,10 +142,10 @@
 		2935ACB82564C2D30037DE23 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2935ACB92564C2EE0037DE23 /* AgendaView.storyboard */,
+				2935ACB92564C2EE0037DE23 /* AgendaViewController.storyboard */,
 				2935ACBD2564C4B20037DE23 /* AgendaViewController.swift */,
 				2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */,
-				2915D3A1256F459300A9D192 /* AgendaGridView.storyboard */,
+				2915D3A1256F459300A9D192 /* AgendaGridViewController.storyboard */,
 				2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */,
 				2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */,
 			);
@@ -183,7 +187,7 @@
 		293806192570975500F09163 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2938061A2570976D00F09163 /* PagerView.storyboard */,
+				2938061A2570976D00F09163 /* PagerViewController.storyboard */,
 				2938061C257097CB00F09163 /* PageViewController.swift */,
 				2938061E2570A7DF00F09163 /* FinalStepViewController.swift */,
 			);
@@ -211,6 +215,7 @@
 		2976E2BF254A55C70018CAB3 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				29F4EB2325772F17005E8E78 /* Common */,
 				293806182570973700F09163 /* Pager */,
 				299FB43E256DF8F400EEB790 /* ContactDetail */,
 				29D3092C256C9FF1007F96DB /* BDEntities */,
@@ -244,7 +249,7 @@
 		2976E2D6254A560B0018CAB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2976E2D7254A56270018CAB3 /* Login.storyboard */,
+				2976E2D7254A56270018CAB3 /* LoginViewController.storyboard */,
 				2976E2D9254A568F0018CAB3 /* LoginViewController.swift */,
 			);
 			path = View;
@@ -288,7 +293,7 @@
 		2976E2E6254A68000018CAB3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2976E2E8254A681C0018CAB3 /* Register.storyboard */,
+				2976E2E8254A681C0018CAB3 /* RegisterViewController.storyboard */,
 				2976E2EA254A683B0018CAB3 /* RegisterViewController.swift */,
 			);
 			path = View;
@@ -382,6 +387,15 @@
 			name = Wireframe;
 			sourceTree = "<group>";
 		};
+		29F4EB2325772F17005E8E78 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				29F4EB2425772F38005E8E78 /* CommonProtocols.swift */,
+				29F1F7E62577FB0100AD8549 /* StoryboardExtensions.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		61C43299109F580154934C39 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,15 +473,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2976E2D8254A56270018CAB3 /* Login.storyboard in Resources */,
-				2915D3A2256F459300A9D192 /* AgendaGridView.storyboard in Resources */,
+				2976E2D8254A56270018CAB3 /* LoginViewController.storyboard in Resources */,
+				2915D3A2256F459300A9D192 /* AgendaGridViewController.storyboard in Resources */,
 				299FB442256DF93600EEB790 /* ContactDetailViewController.storyboard in Resources */,
 				2976E2CD254A55CE0018CAB3 /* LaunchScreen.storyboard in Resources */,
 				2976E2CA254A55CE0018CAB3 /* Assets.xcassets in Resources */,
-				2935ACBA2564C2EE0037DE23 /* AgendaView.storyboard in Resources */,
+				2935ACBA2564C2EE0037DE23 /* AgendaViewController.storyboard in Resources */,
 				2976E2C8254A55C70018CAB3 /* Main.storyboard in Resources */,
-				2938061B2570976D00F09163 /* PagerView.storyboard in Resources */,
-				2976E2E9254A681C0018CAB3 /* Register.storyboard in Resources */,
+				2938061B2570976D00F09163 /* PagerViewController.storyboard in Resources */,
+				2976E2E9254A681C0018CAB3 /* RegisterViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +558,8 @@
 				2976E2C3254A55C70018CAB3 /* SceneDelegate.swift in Sources */,
 				2935ACC12564C5CA0037DE23 /* AgendaModel.swift in Sources */,
 				29CD017C255F8209002B5B4E /* LoginEntity.swift in Sources */,
+				29F1F7E72577FB0100AD8549 /* StoryboardExtensions.swift in Sources */,
+				29F4EB2525772F38005E8E78 /* CommonProtocols.swift in Sources */,
 				2938061F2570A7DF00F09163 /* FinalStepViewController.swift in Sources */,
 				299FB439256DF6E200EEB790 /* PhoneNumber+CoreDataClass.swift in Sources */,
 				299FB43C256DF6E200EEB790 /* User+CoreDataClass.swift in Sources */,

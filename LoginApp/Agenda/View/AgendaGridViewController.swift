@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-class AgendaGridViewController: UIViewController {
+class AgendaGridViewController: UIViewController, LoadableViewController {
+
+    static var storyboardFileName: String = "AgendaGridViewController"
+    
     @IBOutlet weak var contactsCollectionView: UICollectionView!
     
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -54,7 +57,7 @@ extension AgendaGridViewController: AgendaViewable {
         }
     }
     
-    func updateView(with contacts: [ContactItem]) {
+    func updateView(with contacts: Contacts) {
         self.contacts = contacts
         self.contactsCollectionView.reloadData()
     }
@@ -75,7 +78,7 @@ extension AgendaGridViewController: UICollectionViewDataSource {
 extension AgendaGridViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let controller = ContactDetailWireframe.buildLoginModule() as! ContactDetailViewController
+        let controller = ContactDetailWireframe.buildContactDetailModule()
         controller.contactDetail = ContactDetailVM(name: contacts[indexPath.row].name, phoneNumers: [])
         //self.navigationController?.pushViewController(controller, animated: true)
         self.present(controller, animated: true, completion: nil)

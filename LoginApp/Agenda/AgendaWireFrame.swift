@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class AgendaWireFrame: AgendaWireframe {
+class AgendaWireFrame: AgendaWireframeProtocol {
     
-    static func buildAgendaTableModule() -> Any {
-        let view = UIStoryboard(name: "AgendaView", bundle: nil).instantiateViewController(identifier: "AgendaView") as! AgendaViewController
+    static func buildAgendaTableModule() -> AgendaViewController {
+        let view = AgendaViewController.instantiate()
         let controller = AgendaController()
         
         controller.view = view
@@ -21,8 +21,8 @@ class AgendaWireFrame: AgendaWireframe {
         return view
     }
     
-    static func buildAgendaGridModule() -> Any {
-        let view = UIStoryboard(name: "AgendaGridView", bundle: nil).instantiateViewController(identifier: "AgendaGridView") as! AgendaGridViewController
+    static func buildAgendaGridModule() -> AgendaGridViewController {
+        let view = AgendaGridViewController.instantiate()
         let controller = AgendaController()
         
         controller.view = view

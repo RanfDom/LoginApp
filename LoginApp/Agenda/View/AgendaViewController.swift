@@ -9,14 +9,16 @@
 import Foundation
 import UIKit
 
-class AgendaViewController: UIViewController {
+class AgendaViewController: UIViewController, LoadableViewController {
+
+    static var storyboardFileName: String = "AgendaViewController"
     
     @IBOutlet weak var contactsTableView: UITableView!
     @IBOutlet weak var registerView: UIView!
     @IBOutlet weak var newContactTxtField: UITextField!
     
     var controller: AgendaControllable?
-    var contacts: [ContactItem] = []
+    var contacts: Contacts = []
     
     @IBAction func registerButtonAction(_ sender: Any) {
         guard let name: String = newContactTxtField.text else { return }
@@ -62,7 +64,7 @@ extension AgendaViewController: AgendaViewable {
         }
     }
     
-    func updateView(with contacts: [ContactItem]) {
+    func updateView(with contacts: Contacts) {
         self.contacts = contacts
         self.contactsTableView.reloadData()
     }
@@ -70,7 +72,7 @@ extension AgendaViewController: AgendaViewable {
 
 extension AgendaViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = ContactDetailWireframe.buildLoginModule() as! ContactDetailViewController
+        let controller = ContactDetailWireframe.buildContactDetailModule() as! ContactDetailViewController
         controller.contactDetail = ContactDetailVM(name: contacts[indexPath.row].name, phoneNumers: [])
         //self.navigationController?.pushViewController(controller, animated: true)
         self.present(controller, animated: true, completion: nil)

@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class PageViewController: UIPageViewController {
+class PageViewController: UIPageViewController, LoadableViewController {
+    
+    static var storyboardFileName: String = "PageViewController"
     
     lazy var orderedViewControllers: [UIViewController] = {
         return [newStepViewController(step: "1"),
