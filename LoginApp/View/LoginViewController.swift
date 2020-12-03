@@ -8,8 +8,8 @@
 
 import Foundation
 import UIKit
-import FBSDKLoginKit
-import SDWebImage
+//import FBSDKLoginKit
+//import SDWebImage
 
 typealias LoginProtocols = LoginViewProtocol&Greetable&LoadableViewController
 
@@ -38,12 +38,12 @@ class LoginViewController: UIViewController, LoginProtocols {
         pwdInputText.isSecureTextEntry = true
         pwdInputText.delegate = self
         loginButton.setTitle("Login", for: .normal)
-        
-        if !isFBValidToken() {
-            addFBLoginButton()
-        } else {
-            greetUser()
-        }
+//
+//        if !isFBValidToken() {
+//            addFBLoginButton()
+//        } else {
+//            greetUser()
+//        }
         
         controller?.getUserInfo()
     }
@@ -65,61 +65,61 @@ class LoginViewController: UIViewController, LoginProtocols {
     func pushNewController(_ controller: UIViewController) {
         self.navigationController?.pushViewController(controller, animated: true)
     }
+//
+//    private func isFBValidToken() -> Bool {
+//        let isTokenExist = AccessToken.current?.tokenString != nil
+//        let isTokenValid = !(AccessToken.current?.isExpired ?? true)
+//        return isTokenExist && isTokenValid
+//    }
     
-    private func isFBValidToken() -> Bool {
-        let isTokenExist = AccessToken.current?.tokenString != nil
-        let isTokenValid = !(AccessToken.current?.isExpired ?? true)
-        return isTokenExist && isTokenValid
-    }
+//    private func addFBLoginButton() {
+//        let fbLoginButton = FBLoginButton()
+//        fbLoginButton.delegate = self
+//        fbLoginButton.permissions = ["public_profile", "email"]
+//        fbLoginButton.center = self.view.center
+//        view.addSubview(fbLoginButton)
+//    }
     
-    private func addFBLoginButton() {
-        let fbLoginButton = FBLoginButton()
-        fbLoginButton.delegate = self
-        fbLoginButton.permissions = ["public_profile", "email"]
-        fbLoginButton.center = self.view.center
-        view.addSubview(fbLoginButton)
-    }
-    
-    private func greetUser() {
-        let requestFields = "email, first_name, picture"
-        
-        GraphRequest.init(graphPath: "me", parameters: ["fields": requestFields]).start { (connection, result, error) in
-            guard let resultDict = result as? [String: Any],
-                let image = resultDict["picture"] as? [String: Any],
-                let imageData = image["data"] as? [String: Any],
-                let imageURL = imageData["url"] as? String else { return }
-            
-            self.profileImage.isHidden = false
-            self.profileImage.sd_setImage(with: URL(string: imageURL), placeholderImage: nil) { (resImage, error, _, _) in
-                self.profileImage.image = resImage!
-            }
-        }
-    }
+//    private func greetUser() {
+//        let requestFields = "email, first_name, picture"
+//
+//        GraphRequest.init(graphPath: "me", parameters: ["fields": requestFields]).start { (connection, result, error) in
+//            guard let resultDict = result as? [String: Any],
+//                let image = resultDict["picture"] as? [String: Any],
+//                let imageData = image["data"] as? [String: Any],
+//                let imageURL = imageData["url"] as? String else { return }
+//
+//            self.profileImage.isHidden = false
+//            self.profileImage.sd_setImage(with: URL(string: imageURL), placeholderImage: nil) { (resImage, error, _, _) in
+//                self.profileImage.image = resImage!
+//            }
+//        }
+//    }
     
     func updateView(with model: LoginEntityView) {
         labelHello.text = model.name
     }
 }
 
-extension LoginViewController: LoginButtonDelegate {
-    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-        print("User logged out")
-    }
-    
-    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        if let error = error {
-            print("FaceBook login error: \(error.localizedDescription)")
-        } else if let result = result {
-            // move to another controller
-            print("UserLogged")
-            let declinedPermissions = result.declinedPermissions
-            let grantedPermissions = result.grantedPermissions
-            let fbToken = result.token?.tokenString ?? ""
-        }
-    }
-    
-    
-}
+//extension LoginViewController: LoginButtonDelegate {
+//    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
+//        print("User logged out")
+//    }
+//
+//    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+//        if let error = error {
+//            print("FaceBook login error: \(error.localizedDescription)")
+//        } else if let result = result {
+//            // move to another controller
+//            print("UserLogged")
+//            let declinedPermissions = result.declinedPermissions
+//            let grantedPermissions = result.grantedPermissions
+//            let fbToken = result.token?.tokenString ?? ""
+//        }
+//    }
+//
+//
+//}
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

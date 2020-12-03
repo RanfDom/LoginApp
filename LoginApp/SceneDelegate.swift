@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 import CoreData
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -24,18 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         //self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window = UIWindow(windowScene: wScene)
-        
-        /*
-         Mostrar tutorial solo la primera vez / la primera actualización
-         */
-        
-        /*
-        let controller = PageViewController.instantiate()
-        let navigationController = UINavigationController()
-        navigationController.viewControllers = [controller]
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
-         */
         
         var usrData: [NSManagedObject] = []
         
@@ -55,16 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         // 4 hacer uso del response.
-        let navigationController = UINavigationController()
-        if !usrData.isEmpty {
-            // Usuario Registrado
-            let controller = LoginWireFrame.buildLoginModule()
-            navigationController.viewControllers = [controller]
-        } else {
-            let controller = RegisterWireFrame.buildRegisterModule()
-            navigationController.viewControllers = [controller]
-        }
-        
+        let navigationController = UINavigationController(rootViewController: LaunchAppHelper.getInitialController(true, isRegisteredUser: !usrData.isEmpty))
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }
@@ -97,10 +76,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        guard let url = URLContexts.first?.url else { return }
-        ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
-    }
+//    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+//        guard let url = URLContexts.first?.url else { return }
+//        ApplicationDelegate.shared.application(UIApplication.shared, open: url, sourceApplication: nil, annotation: [UIApplication.OpenURLOptionsKey.annotation])
+//    }
 
 }
 

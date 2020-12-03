@@ -18,6 +18,38 @@
             endingLineNumber = "105"
             landmarkName = "deleteContact(at:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D3E827C0-5F19-414C-9DE2-E6457CB84C2E - 94b825ae5e0b1f1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "1802">
+               </Location>
+               <Location
+                  uuid = "D3E827C0-5F19-414C-9DE2-E6457CB84C2E - 6817becd0a8e291c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "1802">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -34,6 +66,38 @@
             endingLineNumber = "117"
             landmarkName = "deleteContact(at:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "942FC6AB-13BF-4C8B-89E7-ED832271CDA4 - 94b825ae5e0b1f1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "2516">
+               </Location>
+               <Location
+                  uuid = "942FC6AB-13BF-4C8B-89E7-ED832271CDA4 - 6817becd0a8e291c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "2516">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -50,6 +114,38 @@
             endingLineNumber = "42"
             landmarkName = "getContacts()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "605F9753-BB25-4E2B-AFD4-25A210FCE478 - fa62f279ee3bfc39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.AgendaController.(getContacts in _E1425F48A6076C040F2ADA5E410A0B5A)() -&gt; Swift.Array&lt;LoginApp.ContactData&gt;"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "3333">
+               </Location>
+               <Location
+                  uuid = "605F9753-BB25-4E2B-AFD4-25A210FCE478 - 65db2272d6db049a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.AgendaController.(getContacts in _AEAF868D73108CE6AD38FA571D4AFBEA)() -&gt; Swift.Array&lt;LoginAppTests.ContactData&gt;"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "3333">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -66,6 +162,38 @@
             endingLineNumber = "81"
             landmarkName = "registerContact(with:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E7D2DD8-7795-44D8-8D09-2C04BF975899 - 394a9be8072f7733"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.AgendaController.registerContact(with: LoginApp.NewContactItem) -&gt; ()"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1176">
+               </Location>
+               <Location
+                  uuid = "0E7D2DD8-7795-44D8-8D09-2C04BF975899 - 1619f1cc42ad311b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.AgendaController.registerContact(with: LoginAppTests.NewContactItem) -&gt; ()"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "1176">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -82,6 +210,38 @@
             endingLineNumber = "113"
             landmarkName = "deleteContact(at:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1CDB8127-3792-4A44-A1DE-134EC3F73FB7 - 94b825ae5e0b1f1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "3467">
+               </Location>
+               <Location
+                  uuid = "1CDB8127-3792-4A44-A1DE-134EC3F73FB7 - 6817becd0a8e291c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "3467">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,6 +258,38 @@
             endingLineNumber = "38"
             landmarkName = "registerUser(_:pwd:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2E5EF1F2-20C2-47EB-B772-CF73CDEFED05 - 4d58f897f75eb108"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.RegisterController.registerUser(_: Swift.String, pwd: Swift.String) -&gt; ()"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Register/Controller/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1367">
+               </Location>
+               <Location
+                  uuid = "2E5EF1F2-20C2-47EB-B772-CF73CDEFED05 - a96edd6114897528"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.RegisterController.registerUser(_: Swift.String, pwd: Swift.String) -&gt; ()"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Register/Controller/RegisterController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1367">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -112,8 +304,40 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserInfo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8AF37B57-E453-4477-8E67-BC1447B78E05 - ea6483d5f99acded"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.LoginController.getUserInfo() -&gt; ()"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/LoginController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "2403">
+               </Location>
+               <Location
+                  uuid = "8AF37B57-E453-4477-8E67-BC1447B78E05 - 8f3964a258324b0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.LoginController.getUserInfo() -&gt; ()"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/LoginController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "2403">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -130,6 +354,38 @@
             endingLineNumber = "95"
             landmarkName = "deleteContact(at:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BF32D7A8-B41F-4B6F-AD6A-845141708554 - 94b825ae5e0b1f1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginApp.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "158">
+               </Location>
+               <Location
+                  uuid = "BF32D7A8-B41F-4B6F-AD6A-845141708554 - 6817becd0a8e291c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginAppTests.AgendaController.deleteContact(at: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LoginAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ranferi.dominguez/Documents/ApprenDev/LoginApp/LoginApp/Agenda/Controller/AgendaController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "158">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
