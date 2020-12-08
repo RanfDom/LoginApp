@@ -7,39 +7,23 @@
 //
 
 import Foundation
-import ObjectMapper
 
-struct WeatherData: Mappable {
+struct WeatherData: Codable {
     var data: [ZoneWeather]?
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        data <- map["data"]
-    }
 }
 
-struct ZoneWeather: Mappable {
+struct ZoneWeather: Codable {
+    let cityName: String
+    let countryCode: String
+    let weather: Weather
     
-    var city: String!
-    var contryCode: String!
-    var weather: Weather!
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        city <- map["city_name"]
-        contryCode <- map["country_code"]
-        weather <- map["weather"]
-    }
+//    enum CodingKeys: String, CodingKey {
+//     case city = "city_name"
+//     case countryCode = "country_code"
+//     case weather = "weather"
+//    }
 }
 
-struct Weather: Mappable {
-    var description: String!
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        description <- map["description"]
-    }
+struct Weather: Codable {
+    let description: String
 }

@@ -43,7 +43,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         // 4 hacer uso del response.
-        let navigationController = UINavigationController(rootViewController: LaunchAppHelper.getInitialController(true, isRegisteredUser: !usrData.isEmpty))
+//        let navigationController = UINavigationController(rootViewController: LaunchAppHelper.getInitialController(true, isRegisteredUser: !usrData.isEmpty))
+        let navigationController = UINavigationController(rootViewController: ViewController.instantiate())
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }

@@ -10,13 +10,15 @@ import Foundation
 import UIKit
 import XCTest
 
+@testable import LoginApp
+
 class SceneDelegateTest: XCTestCase {
-    func testOnboardingController() {
-//        let isOnboarding: Bool = true
-//        let isRegisteredUser: Bool = false
-//        
-//        let controller = LaunchAppHelper.getInitialController(isOnboarding, isRegisteredUser: isRegisteredUser)
-//        
-//        XCTAssertTrue(controller is PageViewController)
+    func testPagerController() {
+        let isOnboarding: Bool = true
+        let isRegisteredUser: Bool = false
+        
+        let controller = LaunchAppHelper.getInitialController(isOnboarding, isRegisteredUser: isRegisteredUser)
+        
+        XCTAssertTrue(controller is PageViewController)
     }
 }
