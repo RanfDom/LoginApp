@@ -55,16 +55,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         // 4 hacer uso del response.
-        let navigationController = UINavigationController()
-        if !usrData.isEmpty {
-            // Usuario Registrado
-            let controller = LoginWireFrame.buildLoginModule()
-            navigationController.viewControllers = [controller]
-        } else {
-            let controller = RegisterWireFrame.buildRegisterModule()
-            navigationController.viewControllers = [controller]
-        }
-        
+        let navigationController = UINavigationController(rootViewController: SceneHelper.getInitialController(true, isRegistered: !usrData.isEmpty))
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }

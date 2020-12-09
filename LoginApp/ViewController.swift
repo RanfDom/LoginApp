@@ -9,7 +9,6 @@
 import UIKit
 import Foundation
 import Alamofire
-import ObjectMapper
 import MapKit
 import NVActivityIndicatorView
 
@@ -92,22 +91,20 @@ class ViewController: UIViewController {
     }
     
     private func getWeatherAlamofireWith(_ url: URL, headers: [String:String], params: [String:String]) {
+        let decoder: JSONDecoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
         AF.request(url,
                    parameters: params,
-                   headers: HTTPHeaders(headers)).responseJSON { response in
+                   headers: HTTPHeaders(headers)).responseDecodable(of: WeatherData.self, decoder: decoder) { [weak self] response in
                     switch response.result {
-                    case .success(_):
-                        guard let weatherData: WeatherData = Mapper<WeatherData>().map(JSONString: String(data: response.data!,encoding: .utf8)!) else { return }
-                        debugPrint(response)
-                        
-                        DispatchQueue.main.async { [weak self] in
-                            guard let weather: ZoneWeather = weatherData.data?.first else { return }
-                            self?.presentWeatherWith(weather)
-                        }
+                    case .success(let weatherData):
+                        guard let weather: ZoneWeather = weatherData.data?.first else { return }
+                        self?.presentWeatherWith(weather)
                     case .failure(let error):
                         print("Something whent wrong: \(error)")
                     }
-        }
+                   }
     }
     
     private func getLocationTitle(lattitude: CLLocationDegrees, longitude: CLLocationDegrees) -> String {

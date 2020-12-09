@@ -3,14 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07D585728252AB1A11369D11 /* Pods_LoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */; };
 		2915D3A2256F459300A9D192 /* AgendaGridViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2915D3A1256F459300A9D192 /* AgendaGridViewController.storyboard */; };
 		2915D3A4256F46E700A9D192 /* AgendaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */; };
 		2915D3A6256F4F3800A9D192 /* AgendaGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */; };
+		291EB3B3257F153400C0A7A7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 291EB3B2257F153400C0A7A7 /* Alamofire */; };
+		291EB3B7257F156500C0A7A7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 291EB3B6257F156500C0A7A7 /* NVActivityIndicatorView */; };
+		291EB3BB257F159D00C0A7A7 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 291EB3BA257F159D00C0A7A7 /* FacebookLogin */; };
+		291EB3BF257F1AA900C0A7A7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 291EB3BE257F1AA900C0A7A7 /* SDWebImage */; };
+		291EB3C9257F1B6B00C0A7A7 /* LoginAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EB3C8257F1B6B00C0A7A7 /* LoginAppTests.swift */; };
+		291EB3D4257F1BE900C0A7A7 /* SceneHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EB3D3257F1BE900C0A7A7 /* SceneHelper.swift */; };
+		291EB3DB257F1F8500C0A7A7 /* ScenceneHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291EB3DA257F1F8500C0A7A7 /* ScenceneHelperTest.swift */; };
 		2927A50525675AAA00F4A6E1 /* AgendaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */; };
 		2932D1AF255246B800005015 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932D1AE255246B800005015 /* Weather.swift */; };
 		2935ACBA2564C2EE0037DE23 /* AgendaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2935ACB92564C2EE0037DE23 /* AgendaViewController.storyboard */; };
@@ -18,7 +24,7 @@
 		2935ACC12564C5CA0037DE23 /* AgendaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC02564C5CA0037DE23 /* AgendaModel.swift */; };
 		2935ACC32564C82A0037DE23 /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC22564C82A0037DE23 /* AgendaController.swift */; };
 		2935ACC52564C83A0037DE23 /* AgendaProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */; };
-		2938061B2570976D00F09163 /* PagerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2938061A2570976D00F09163 /* PagerViewController.storyboard */; };
+		2938061B2570976D00F09163 /* PageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2938061A2570976D00F09163 /* PageViewController.storyboard */; };
 		2938061D257097CB00F09163 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938061C257097CB00F09163 /* PageViewController.swift */; };
 		2938061F2570A7DF00F09163 /* FinalStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2938061E2570A7DF00F09163 /* FinalStepViewController.swift */; };
 		2976E2C1254A55C70018CAB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976E2C0254A55C70018CAB3 /* AppDelegate.swift */; };
@@ -54,11 +60,25 @@
 		29F4EB2525772F38005E8E78 /* CommonProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F4EB2425772F38005E8E78 /* CommonProtocols.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		291EB3CB257F1B6B00C0A7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2976E2B5254A55C60018CAB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2976E2BC254A55C70018CAB3;
+			remoteInfo = LoginApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2915D3A1256F459300A9D192 /* AgendaGridViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaGridViewController.storyboard; sourceTree = "<group>"; };
 		2915D3A3256F46E700A9D192 /* AgendaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaGridViewController.swift; sourceTree = "<group>"; };
 		2915D3A5256F4F3800A9D192 /* AgendaGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaGridCell.swift; sourceTree = "<group>"; };
+		291EB3C6257F1B6B00C0A7A7 /* LoginAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		291EB3C8257F1B6B00C0A7A7 /* LoginAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAppTests.swift; sourceTree = "<group>"; };
+		291EB3CA257F1B6B00C0A7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		291EB3D3257F1BE900C0A7A7 /* SceneHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneHelper.swift; sourceTree = "<group>"; };
+		291EB3DA257F1F8500C0A7A7 /* ScenceneHelperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenceneHelperTest.swift; sourceTree = "<group>"; };
 		2927A50425675AAA00F4A6E1 /* AgendaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaTableViewCell.swift; sourceTree = "<group>"; };
 		2932D1AE255246B800005015 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2935ACB92564C2EE0037DE23 /* AgendaViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AgendaViewController.storyboard; sourceTree = "<group>"; };
@@ -66,7 +86,7 @@
 		2935ACC02564C5CA0037DE23 /* AgendaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaModel.swift; sourceTree = "<group>"; };
 		2935ACC22564C82A0037DE23 /* AgendaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaController.swift; sourceTree = "<group>"; };
 		2935ACC42564C83A0037DE23 /* AgendaProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaProtocols.swift; sourceTree = "<group>"; };
-		2938061A2570976D00F09163 /* PagerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PagerViewController.storyboard; sourceTree = "<group>"; };
+		2938061A2570976D00F09163 /* PageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PageViewController.storyboard; sourceTree = "<group>"; };
 		2938061C257097CB00F09163 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		2938061E2570A7DF00F09163 /* FinalStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalStepViewController.swift; sourceTree = "<group>"; };
 		2976E2BD254A55C70018CAB3 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,22 +122,56 @@
 		29DF41B925660C4500C4D038 /* AgendaWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaWireFrame.swift; sourceTree = "<group>"; };
 		29F1F7E62577FB0100AD8549 /* StoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtensions.swift; sourceTree = "<group>"; };
 		29F4EB2425772F38005E8E78 /* CommonProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProtocols.swift; sourceTree = "<group>"; };
-		C795C6741BFD36ECA8177D6B /* Pods-LoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.release.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.release.xcconfig"; sourceTree = "<group>"; };
-		D872FFBB37942B78D68517F0 /* Pods-LoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginApp.debug.xcconfig"; path = "Target Support Files/Pods-LoginApp/Pods-LoginApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		291EB3C3257F1B6B00C0A7A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2976E2BA254A55C70018CAB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07D585728252AB1A11369D11 /* Pods_LoginApp.framework in Frameworks */,
+				291EB3B7257F156500C0A7A7 /* NVActivityIndicatorView in Frameworks */,
+				291EB3B3257F153400C0A7A7 /* Alamofire in Frameworks */,
+				291EB3BF257F1AA900C0A7A7 /* SDWebImage in Frameworks */,
+				291EB3BB257F159D00C0A7A7 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		291EB3C7257F1B6B00C0A7A7 /* LoginAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				291EB3D9257F1F6700C0A7A7 /* SceneDelegateTest */,
+				291EB3C8257F1B6B00C0A7A7 /* LoginAppTests.swift */,
+				291EB3CA257F1B6B00C0A7A7 /* Info.plist */,
+			);
+			path = LoginAppTests;
+			sourceTree = "<group>";
+		};
+		291EB3D2257F1BC600C0A7A7 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				291EB3D3257F1BE900C0A7A7 /* SceneHelper.swift */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		291EB3D9257F1F6700C0A7A7 /* SceneDelegateTest */ = {
+			isa = PBXGroup;
+			children = (
+				291EB3DA257F1F8500C0A7A7 /* ScenceneHelperTest.swift */,
+			);
+			path = SceneDelegateTest;
+			sourceTree = "<group>";
+		};
 		2932D1AD2552469700005015 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +241,7 @@
 		293806192570975500F09163 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2938061A2570976D00F09163 /* PagerViewController.storyboard */,
+				2938061A2570976D00F09163 /* PageViewController.storyboard */,
 				2938061C257097CB00F09163 /* PageViewController.swift */,
 				2938061E2570A7DF00F09163 /* FinalStepViewController.swift */,
 			);
@@ -198,9 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				2976E2BF254A55C70018CAB3 /* LoginApp */,
+				291EB3C7257F1B6B00C0A7A7 /* LoginAppTests */,
 				2976E2BE254A55C70018CAB3 /* Products */,
-				61C43299109F580154934C39 /* Pods */,
-				61E87412CEA20C15426D106C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				2976E2BD254A55C70018CAB3 /* LoginApp.app */,
+				291EB3C6257F1B6B00C0A7A7 /* LoginAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +269,7 @@
 		2976E2BF254A55C70018CAB3 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				291EB3D2257F1BC600C0A7A7 /* Launch */,
 				29F4EB2325772F17005E8E78 /* Common */,
 				293806182570973700F09163 /* Pager */,
 				299FB43E256DF8F400EEB790 /* ContactDetail */,
@@ -396,41 +451,46 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
-		61C43299109F580154934C39 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D872FFBB37942B78D68517F0 /* Pods-LoginApp.debug.xcconfig */,
-				C795C6741BFD36ECA8177D6B /* Pods-LoginApp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		61E87412CEA20C15426D106C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A922D40247E85D09D7648F6 /* Pods_LoginApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		291EB3C5257F1B6B00C0A7A7 /* LoginAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 291EB3CD257F1B6B00C0A7A7 /* Build configuration list for PBXNativeTarget "LoginAppTests" */;
+			buildPhases = (
+				291EB3C2257F1B6B00C0A7A7 /* Sources */,
+				291EB3C3257F1B6B00C0A7A7 /* Frameworks */,
+				291EB3C4257F1B6B00C0A7A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				291EB3CC257F1B6B00C0A7A7 /* PBXTargetDependency */,
+			);
+			name = LoginAppTests;
+			productName = LoginAppTests;
+			productReference = 291EB3C6257F1B6B00C0A7A7 /* LoginAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2976E2BC254A55C70018CAB3 /* LoginApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2976E2D1254A55CE0018CAB3 /* Build configuration list for PBXNativeTarget "LoginApp" */;
 			buildPhases = (
-				56B01A66FFDD6628FE2FD761 /* [CP] Check Pods Manifest.lock */,
 				2976E2B9254A55C70018CAB3 /* Sources */,
 				2976E2BA254A55C70018CAB3 /* Frameworks */,
 				2976E2BB254A55C70018CAB3 /* Resources */,
-				03BB639EAA20EDEA317105D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LoginApp;
+			packageProductDependencies = (
+				291EB3B2257F153400C0A7A7 /* Alamofire */,
+				291EB3B6257F156500C0A7A7 /* NVActivityIndicatorView */,
+				291EB3BA257F159D00C0A7A7 /* FacebookLogin */,
+				291EB3BE257F1AA900C0A7A7 /* SDWebImage */,
+			);
 			productName = LoginApp;
 			productReference = 2976E2BD254A55C70018CAB3 /* LoginApp.app */;
 			productType = "com.apple.product-type.application";
@@ -441,10 +501,14 @@
 		2976E2B5254A55C60018CAB3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Ranferi Dominguez Rios";
 				TargetAttributes = {
+					291EB3C5257F1B6B00C0A7A7 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 2976E2BC254A55C70018CAB3;
+					};
 					2976E2BC254A55C70018CAB3 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -459,16 +523,30 @@
 				Base,
 			);
 			mainGroup = 2976E2B4254A55C60018CAB3;
+			packageReferences = (
+				291EB3B1257F153400C0A7A7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				291EB3B5257F156500C0A7A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				291EB3B9257F159D00C0A7A7 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				291EB3BD257F1AA900C0A7A7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 2976E2BE254A55C70018CAB3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2976E2BC254A55C70018CAB3 /* LoginApp */,
+				291EB3C5257F1B6B00C0A7A7 /* LoginAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		291EB3C4257F1B6B00C0A7A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2976E2BB254A55C70018CAB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,56 +558,23 @@
 				2976E2CA254A55CE0018CAB3 /* Assets.xcassets in Resources */,
 				2935ACBA2564C2EE0037DE23 /* AgendaViewController.storyboard in Resources */,
 				2976E2C8254A55C70018CAB3 /* Main.storyboard in Resources */,
-				2938061B2570976D00F09163 /* PagerViewController.storyboard in Resources */,
+				2938061B2570976D00F09163 /* PageViewController.storyboard in Resources */,
 				2976E2E9254A681C0018CAB3 /* RegisterViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		03BB639EAA20EDEA317105D3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LoginApp/Pods-LoginApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LoginApp/Pods-LoginApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginApp/Pods-LoginApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		56B01A66FFDD6628FE2FD761 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LoginApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
+		291EB3C2257F1B6B00C0A7A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				291EB3C9257F1B6B00C0A7A7 /* LoginAppTests.swift in Sources */,
+				291EB3DB257F1F8500C0A7A7 /* ScenceneHelperTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2976E2B9254A55C70018CAB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -544,6 +589,7 @@
 				2976E2E0254A594A0018CAB3 /* LoginController.swift in Sources */,
 				2932D1AF255246B800005015 /* Weather.swift in Sources */,
 				2976E2DD254A56FE0018CAB3 /* LoginProtocols.swift in Sources */,
+				291EB3D4257F1BE900C0A7A7 /* SceneHelper.swift in Sources */,
 				2976E2EF254A69100018CAB3 /* RegisterProtocols.swift in Sources */,
 				2915D3A6256F4F3800A9D192 /* AgendaGridCell.swift in Sources */,
 				299FB43D256DF6E200EEB790 /* PhoneNumber+CoreDataProperties.swift in Sources */,
@@ -574,6 +620,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		291EB3CC257F1B6B00C0A7A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2976E2BC254A55C70018CAB3 /* LoginApp */;
+			targetProxy = 291EB3CB257F1B6B00C0A7A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		2976E2C6254A55C70018CAB3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -594,6 +648,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		291EB3CE257F1B6B00C0A7A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFFHJ8WBTV;
+				INFOPLIST_FILE = LoginAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bootcamp.LoginAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginApp.app/LoginApp";
+			};
+			name = Debug;
+		};
+		291EB3CF257F1B6B00C0A7A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NFFHJ8WBTV;
+				INFOPLIST_FILE = LoginAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Bootcamp.LoginAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LoginApp.app/LoginApp";
+			};
+			name = Release;
+		};
 		2976E2CF254A55CE0018CAB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -710,7 +808,6 @@
 		};
 		2976E2D2254A55CE0018CAB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D872FFBB37942B78D68517F0 /* Pods-LoginApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -729,7 +826,6 @@
 		};
 		2976E2D3254A55CE0018CAB3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C795C6741BFD36ECA8177D6B /* Pods-LoginApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -749,6 +845,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		291EB3CD257F1B6B00C0A7A7 /* Build configuration list for PBXNativeTarget "LoginAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				291EB3CE257F1B6B00C0A7A7 /* Debug */,
+				291EB3CF257F1B6B00C0A7A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2976E2B8254A55C60018CAB3 /* Build configuration list for PBXProject "LoginApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -768,6 +873,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		291EB3B1257F153400C0A7A7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		291EB3B5257F156500C0A7A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		291EB3B9257F159D00C0A7A7 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
+		291EB3BD257F1AA900C0A7A7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		291EB3B2257F153400C0A7A7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 291EB3B1257F153400C0A7A7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		291EB3B6257F156500C0A7A7 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 291EB3B5257F156500C0A7A7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		291EB3BA257F159D00C0A7A7 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 291EB3B9257F159D00C0A7A7 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		291EB3BE257F1AA900C0A7A7 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 291EB3BD257F1AA900C0A7A7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		29CD0155255F70A9002B5B4E /* LoginDataModel.xcdatamodeld */ = {

@@ -33,7 +33,7 @@ class PageViewController: UIPageViewController, LoadableViewController {
     }
     
     private func newStepViewController(step: String) -> UIViewController {
-        let controller = UIStoryboard(name: "PagerView", bundle: nil).instantiateViewController(identifier: "\(step)ViewController")
+        let controller = UIStoryboard(name: "PageViewController", bundle: nil).instantiateViewController(identifier: "\(step)ViewController")
         if let finalStepController = controller as? FinalStepViewController {
             finalStepController.delegate = self
         }
